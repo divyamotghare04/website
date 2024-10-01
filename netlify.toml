@@ -1,18 +1,10 @@
-[
-build
-]
+[build]
   command = "npm run build"
   publish = "dist"
 
-[[
-redirects
-]]
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
   force = true
 
-[
-build.environment
-]
-  NODE_VERSION = "16"
