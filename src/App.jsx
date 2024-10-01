@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, BrowserRouter, Route } from "react-router-dom";
+import { Routes, HashRouter, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import AppLayout from "./UI/AppLayout";
@@ -20,7 +20,7 @@ import Sales from "./pages/Products/ZohoOne/Sales";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route element={<AppLayout />}>
           <Route path="/" index element={<Home />} />
@@ -51,7 +51,7 @@ function App() {
           <Route path="/team" element={<Team />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
