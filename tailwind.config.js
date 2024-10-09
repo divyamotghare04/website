@@ -15,6 +15,7 @@ export default {
       green: "#0BAA4B",
       blue_data: "#1E0F7654",
       gray_line: "#D9D9D9",
+      blue_gray: "#FFCFD8DC",
     },
     extend: {
       fontFamily: {

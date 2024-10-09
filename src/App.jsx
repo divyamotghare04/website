@@ -39,13 +39,16 @@ function App() {
             element={<ErpConsultation />}
           />
           {/* <Route path="/products" element={<Products />} /> */}
-          <Route path="/products/zoho-one" element={<ZohoOne />}>
-            <Route path="finance" element={<Finance />} />
-            <Route path="sales" element={<Sales />} />
-            <Route path="hr" element={<Hr />} />
-            <Route path="marketing" element={<Marketing />} />
-            <Route path="bi-analytics" element={<BiAnalytics />} />
-          </Route>
+          <Route path="/products/zoho-one" element={<ZohoOne />} />
+
+          <Route path="/products/zoho-one/finance" element={<Finance />} />
+          <Route path="/products/zoho-one/sales" element={<Sales />} />
+          <Route path="/products/zoho-one/hr" element={<Hr />} />
+          <Route path="/products/zoho-one/marketing" element={<Marketing />} />
+          <Route
+            path="/products/zoho-one/bi-analytics"
+            element={<BiAnalytics />}
+          />
           <Route path="/products/erp-next" />
           <Route path="/contact" element={<Contact />} />
           <Route path="/team" element={<Team />} />

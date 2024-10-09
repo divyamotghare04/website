@@ -10,6 +10,7 @@ import zohoImage3 from "../../../assets/zohoImage3.svg";
 import zohoImage4 from "../../../assets/zohoImage4.svg";
 import zohoImage5 from "../../../assets/zohoImage5.svg";
 import zohoImage6 from "../../../assets/zohoImage6.svg";
+import { Link } from "react-router-dom";
 
 const navigation = [
   { name: "Sales", href: "/products/zoho-one/sales" },
@@ -44,20 +45,22 @@ function ZohoOne() {
             requirements.
           </p>
         </div>
-        <div className="flex flex-col mb-2 w-[522px]  divide-y divide-gray_line">
+        <div className="flex flex-col mb-2 w-[522px] divide-y divide-gray_line">
           {navigation.map((item) => (
-            <div className="flex justify-between items-center p-1">
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-xl font-semibold font-poppins  text-gray_text "
+            <button
+              className="flex justify-between items-center p-2"
+              key={item.name}
+            >
+              <Link
+                to={item.href}
+                className="text-xl font-semibold font-poppins text-gray_text"
               >
                 {item.name}
-              </a>
+              </Link>
               <div className="text-green">
                 <FaChevronRight />
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>
@@ -66,7 +69,7 @@ function ZohoOne() {
           At Dataweaver, we excel in....
         </h1>
       </div>
-      <div className="grid grid-cols-2 mx-16 gap-y-10  mb-20 px-20">
+      <div className="grid grid-cols-2 mx-16 gap-y-10 px-20 mb-[200px]">
         <div className="flex py-10 w-[570px] pl-5 border ml-10 items-start justify-center border-green">
           <img src={zohoImage2} />
           <div className="w-[330px] ml-10">
@@ -118,20 +121,25 @@ function ZohoOne() {
           </div>
         </div>
       </div>
-      <div className="mt-20 flex ml-16 h-[499px] ">
-        <div className="h-[499px] w-[527px]">
+      <div className="mt-20 flex justify-between items-center mx-16 h-[499px] mb-[200px]">
+        <div className="h-[499px] w-[527px] ml-10">
           <img src={zohoImage6} />
         </div>
-        <div className="w-[569px]">
-          <h1>Experience the Dataweaver Difference</h1>
-          <p>
+        <div className="w-[569px] mr-10 text-gray_text">
+          <h1 className="font-poppins font-bold text-3xl mb-5">
+            Experience the Dataweaver Difference
+          </h1>
+          <p className="text-xl font-avenir text-gray_text mb-3">
             Discover how expert IT and data analytics, paired with unparalleled
             customer support, can elevate your business. Join forces with
-            Dataweaver and Zoho One today and unlock your true potential. At
-            Dataweaver, we don't just offer services; we become your dedicated
-            partner in business growth. By harnessing the full capabilities of
-            Zoho One, we blend innovation with efficiency to propel your
-            business forward.
+            Dataweaver and Zoho One today and unlock your true potential.
+          </p>{" "}
+          <p className="text-xl font-avenir text-gray_text">
+            {" "}
+            At Dataweaver, we don't just offer services; we become your
+            dedicated partner in business growth. By harnessing the full
+            capabilities of Zoho One, we blend innovation with efficiency to
+            propel your business forward.
           </p>
         </div>
       </div>
