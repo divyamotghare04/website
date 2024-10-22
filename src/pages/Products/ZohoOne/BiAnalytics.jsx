@@ -2,8 +2,8 @@ import FooterTop from "../../../UI/FooterTop";
 import Navbar from "../../../UI/Navbar";
 import blueLogo from "../../../assets/horizontal_blue_logo.png";
 
-import biAnalyticsImage1 from "../../../assets/biAnalyticsImage1.svg";
-import biAnalyticsImage2 from "../../../assets/biAnalyticsImage2.svg";
+import biAnalyticsImage1 from "../../../assets/biAnalyticsImage1.png";
+import biAnalyticsImage2 from "../../../assets/biAnalyticsImage2.png";
 import AccordionCustomAnimation from "../../../components/AccordianCustomAnimation";
 
 import { biAnalyticsAccordianArray } from "../../../utils/helper";

@@ -2,6 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      sm: "480px",
+      md: "768px",
+      lg: "976px",
+      xl: "1440px",
+    },
     colors: {
       primary: "#1d1651",
       secondary: "#352893",
@@ -16,6 +22,7 @@ export default {
       blue_data: "#1E0F7654",
       gray_line: "#D9D9D9",
       blue_gray: "#FFCFD8DC",
+      gray_line: "#c0c6cc", 
     },
     extend: {
       fontFamily: {

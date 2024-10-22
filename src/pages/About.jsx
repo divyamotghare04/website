@@ -7,7 +7,7 @@ import BlueBox from "../components/BlueBox";
 
 import Navbar from "../UI/Navbar";
 import blueLogo from "../assets/horizontal_blue_logo.png";
-import aboutImage1 from "../assets/aboutImage1.svg";
+import aboutImage1 from "../assets/aboutImage1.png";
 import aboutImage2 from "../assets/aboutImage2.png";
 import aboutImage3 from "../assets/aboutImage3.png";
 import aboutImage4 from "../assets/aboutImage4.svg";

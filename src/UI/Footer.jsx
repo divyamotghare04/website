@@ -5,10 +5,9 @@ import ArrowButton from "./ArrowButton";
 const Footer = ({ content }) => {
   return (
     <footer>
-      
       <div className="bg-primary w-full h-[310px] text-white ">
         <div className="py-10 px-20 ">
-          <div className="flex flex-col mt-12 md:flex-row justify-between items-start ">
+          <div className="flex flex-col gap-4 mt-12  md:flex-row justify-between items-start ">
             <div className="">
               <span className="text-sm text-black sm:text-center ">
                 <a href="/" className=" ">
@@ -18,7 +17,7 @@ const Footer = ({ content }) => {
               </span>
             </div>
 
-            <div className="flex space-x-16">
+            <div className="flex space-x-10">
               <div className="md:w-1/2  md:mb-0">
                 <h3 className=" mb-2 font-poppins text-xl">Services</h3>
                 <ul className="space-y-2">
