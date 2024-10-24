@@ -12,6 +12,8 @@ const navigation = [
 
 function Navbar({ logo, color }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
 
   const location = useLocation();
   const isServicesRoute =
@@ -21,6 +23,31 @@ function Navbar({ logo, color }) {
 
   const isActive = (path) => {
     return location.pathname === path;
+  };
+
+  const toggleServicesMenu = () => {
+    setIsServicesOpen(!isServicesOpen);
+  };
+
+  const toggleProductsMenu = () => {
+    setIsProductsOpen(!isProductsOpen);
+  };
+
+  // Open on hover
+  const handleMouseEnterServices = () => {
+    setIsServicesOpen(true);
+  };
+
+  const handleMouseLeaveServices = () => {
+    setIsServicesOpen(false);
+  };
+
+  const handleMouseEnterProducts = () => {
+    setIsProductsOpen(true);
+  };
+
+  const handleMouseLeaveProducts = () => {
+    setIsProductsOpen(false);
   };
 
   return (
@@ -56,7 +83,7 @@ function Navbar({ logo, color }) {
           <div className="mx-10 hidden lg:flex lg:gap-x-12 xl:gap-x-16">
             <Menu as="div" className="relative inline-block text-left">
               <MenuButton
-                className={`inline-flex w-full justify-center xl:text-xl lg:text-lg font-medium font-poppins leading-6 ${
+                className={`inline-flex w-full justify-center xl:text-xl lg:text-lg font-medium font-poppins leading-6 hover:font-bold ${
                   isServicesRoute
                     ? "underline decoration-green decoration-2"
                     : ""
@@ -112,9 +139,9 @@ function Navbar({ logo, color }) {
 
             <Menu as="div" className="relative inline-block text-left">
               <MenuButton
-                className={`inline-flex w-full justify-center xl:text-xl lg:text-lg font-medium font-poppins leading-6 ${
+                className={` hover:font-bold inline-flex w-full justify-center xl:text-xl lg:text-lg font-medium font-poppins leading-6 ${
                   isProductsRoute
-                    ? "underline decoration-green decoration-4"
+                    ? "underline decoration-green decoration-2"
                     : ""
                 }`}
                 style={{
@@ -162,7 +189,7 @@ function Navbar({ logo, color }) {
                 }}
                 key={item.name}
                 href={item.href}
-                className={`xl:text-xl lg:text-lg font-medium font-poppins leading-6 ${
+                className={`xl:text-xl hover:font-bold lg:text-lg font-medium font-poppins leading-6 ${
                   isActive(item.href)
                     ? "underline decoration-green decoration-2"
                     : ""

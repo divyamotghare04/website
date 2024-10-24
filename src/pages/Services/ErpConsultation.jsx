@@ -1,8 +1,8 @@
 import logoBlue from "../../assets/horizontal_blue_logo.png";
 import FooterTop from "../../UI/FooterTop";
 import Navbar from "../../UI/Navbar";
-import erpConsultationImage1 from "../../assets/erpConsultationImage1.svg";
-import erpConsultationImage2 from "../../assets/erpConsultationImage2.svg";
+import erpConsultationImage1 from "../../assets/erpConsultationImage1.png";
+import erpConsultationImage2 from "../../assets/erpConsultationImage2.png";
 
 function ErpConsultation() {
   return (
@@ -71,7 +71,7 @@ function ErpConsultation() {
             seamlessly.
           </p>
         </div>{" "}
-        <div className="xl:px-10 xl:py-8 lg:px-5 lg:py-4 border xl:w-[26rem] lg:w-[20rem] lg:h-[9rem] xl:h-[12rem] border-green ">
+        <div className="xl:px-10 xl:py-8 lg:px-5 lg:py-4  xl:w-[26rem] lg:w-[20rem] lg:h-[9rem] xl:h-[12rem] border border-green ">
           <h1 className="font-poppins font-semibold mb-4 xl:text-2xl lg:text-base">
             ERP Upgrades and Replacement:
           </h1>

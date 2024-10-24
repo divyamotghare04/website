@@ -3,7 +3,7 @@ import { GoArrowRight } from "react-icons/go";
 function ArrowButton({ content, color, textColor }) {
   return (
     <button
-      className={`flex items-center justify-between border-2 w-[290px] h-[58px]`}
+      className={`flex items-center justify-between border-2 xl:w-[19rem] xl:h-[3.7rem] lg:w-[15rem] lg:h-[3rem]`}
       style={{
         borderColor: color,
       }}

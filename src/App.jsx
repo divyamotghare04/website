@@ -17,6 +17,7 @@ import Hr from "./pages/Products/ZohoOne/Hr.";
 import Marketing from "./pages/Products/ZohoOne/Marketing";
 import Finance from "./pages/Products/ZohoOne/Finance";
 import Sales from "./pages/Products/ZohoOne/Sales";
+import ErpNext from "./pages/Products/ErpNext";
 
 function App() {
   return (
@@ -49,7 +50,7 @@ function App() {
             path="/products/zoho-one/bi-analytics"
             element={<BiAnalytics />}
           />
-          <Route path="/products/erp-next" />
+          <Route path="/products/erp-next" element={<ErpNext />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/team" element={<Team />} />
         </Route>

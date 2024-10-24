@@ -3,14 +3,14 @@ import teamImage2 from "../assets/teamImage2.png";
 
 function ImageContainer({ img, name, role }) {
   return (
-    <div className="p-20">
+    <div className="xl:p-20 lg:p-12">
       <div className="relative ">
         {/* The background (black) element */}
-        <div className="w-[243px] h-[209px] ">
+        <div className="xl:w-[20rem] xl:h-[15rem] lg:w-[12rem] lg:h-[12rem]">
           <img src={teamImage2} />
         </div>
         {/* The overlay (image) element */}
-        <div className="absolute top-0 left-0 w-[248px] h-[260px]  -translate-x-10 -translate-y-20">
+        <div className="absolute top-0 left-0 xl:w-[20rem] xl:h-[20rem] lg:w-[12.5rem]  -translate-x-10 -translate-y-20">
           {" "}
           <img src={teamImage3} />
         </div>

@@ -17,24 +17,32 @@ const Footer = ({ content }) => {
               </span>
             </div>
 
-            <div className="flex space-x-10">
-              <div className="md:w-1/2  md:mb-0">
+            <div className="flex xl:space-x-12 lg:space-x-5">
+              <div className="">
                 <h3 className=" mb-2 font-poppins text-xl">Services</h3>
                 <ul className="space-y-2">
                   <li>
-                    <a href="/datamanagement">Data Management</a>
+                    <a href="/services/data-management">Data Management</a>
                   </li>
                   <li>
-                    <a href="/erp">ERP</a>
+                    <a href="/services/erp-consultation">ERP</a>
                   </li>
                   <li>
-                    <a href="/zoho">ZOHO </a>
+                    <a href="/services/zoho-customization">ZOHO </a>
                   </li>
                 </ul>
               </div>
-              <a href="/products">
+              <div className="">
                 <h3 className=" mb-2 font-poppins text-xl">Products</h3>
-              </a>
+                <ul className="space-y-2">
+                  <li>
+                    <a href="/products/zoho-one">ZOHO One</a>
+                  </li>
+                  <li>
+                    <a href="/products/erp-next">ERP Next</a>
+                  </li>
+                </ul>
+              </div>
               <a href="/team">
                 <h3 className=" mb-2 font-poppins text-xl">Team</h3>
               </a>

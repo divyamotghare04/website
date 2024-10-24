@@ -109,28 +109,28 @@ function DataManagement() {
       </div>
       <div className="grid grid-cols-2 gap-10 mx-16 mb-[9.375rem]">
         <div className="flex p-[0.625rem] border items-start justify-center border-green">
-          <div className="lg:size-22">
+          <div className="w-[7rem]">
             <img src={dataImage6} />
           </div>
           <div className="w-[20.625rem] ml-8">
-            <h1 className="font-poppins mb-4 font-semibold text-2xl lg:text-xl">
+            <h1 className="font-poppins mb-4 font-semibold xl:text-2xl lg:text-xl">
               Effortless Implementation
             </h1>
-            <p className="font-avenir text-lg lg:text-base text-gray_text">
+            <p className="font-avenir xl:text-lg lg:text-base text-gray_text">
               Our expert team ensures a smooth, hassle-free transition to Zoho
               One, enabling your business to quickly harness its full potential
             </p>
           </div>
         </div>
         <div className="flex p-[0.625rem] border items-start justify-center border-green">
-          <div className="lg:size-22">
+          <div className="w-[7rem]">
             <img src={dataImage5} />
           </div>
           <div className="w-[20.625rem] ml-8">
-            <h1 className="font-poppins mb-4 font-semibold text-2xl lg:text-xl">
+            <h1 className="font-poppins mb-4 font-semibold xl:text-2xl lg:text-xl">
               Tailored Customization
             </h1>
-            <p className="font-avenir lg:text-base text-lg text-gray_text">
+            <p className="font-avenir lg:text-base xl:text-lg text-gray_text">
               We work closely with you to personalize Zoho One applications,
               perfectly aligning them with your unique business processes and
               objectives
@@ -138,28 +138,28 @@ function DataManagement() {
           </div>
         </div>
         <div className="flex p-[0.625rem] border items-start justify-center border-green">
-          <div className="lg:size-22">
+          <div className="w-[7rem]">
             <img src={dataImage4} />
           </div>
           <div className="w-[20.625rem] ml-10">
-            <h1 className="font-poppins mb-4 font-semibold text-2xl lg:text-xl">
+            <h1 className="font-poppins mb-4 font-semibold xl:text-2xl lg:text-xl">
               Seamless Integration
             </h1>
-            <p className="font-avenir lg:text-base text-lg text-gray_text">
+            <p className="font-avenir lg:text-base xl:text-lg text-gray_text">
               We flawlessly integrate Zoho One applications with your existing
               systems, creating a unified and efficient workflow.
             </p>
           </div>
         </div>
         <div className="flex p-[0.625rem]  border items-start justify-center border-green">
-          <div className="lg:size-22">
+          <div className="w-[7rem]">
             <img src={dataImage3} />
           </div>
           <div className="w-[20.625rem] ml-10">
-            <h1 className="font-poppins mb-4 font-semibold text-2xl lg:text-xl">
+            <h1 className="font-poppins mb-4 font-semibold xl:text-2xl lg:text-xl">
               Ongoing Support
             </h1>
-            <p className="font-avenir text-lg lg:text-base text-gray_text">
+            <p className="font-avenir xl:text-lg lg:text-base text-gray_text">
               Our commitment to your success continues beyond implementation. We
               provide continuous support to ensure you consistently maximize the
               benefits of Zoho One.

@@ -73,8 +73,8 @@ function About() {
     <div>
       <Navbar logo={blueLogo} />
       <div className="flex flex-col">
-        <div className="mt-[157px] mb-10">
-          <h1 className="ml-16 font-extrabold text-4xl font-inter text-black">
+        <div className="mt-[10rem] mb-10">
+          <h1 className="ml-16 font-extrabold xl:text-4xl lg:text-2xl font-inter text-black">
             <div className="mb-2"> Born from Dreams, Powered by</div>
             <div>Innovation: Introducing Dataweaver!</div>
           </h1>
@@ -98,6 +98,7 @@ function About() {
                   src={logo}
                   alt={`Brand logo ${index + 1}`}
                   className="w-full h-full object-contain"
+                  loading="lazy"
                 />
               </div>
             ))}
@@ -162,7 +163,7 @@ function About() {
 
         <div className="mt-10 ml-20">
           <h1 className=" w-[492px] text-3xl font-bold font-poppins text-gray_text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Dataweaver, driven by passion and enthusiasm.
           </h1>
           <p className="text-lg w-[569px] font-normal mt-8 font-avenir text-balance text-gray_text">
             We specialise in taking your business digital, by optimizing the
@@ -175,7 +176,7 @@ function About() {
       <div className="flex items-center justify-end mb-[156px]  mx-16">
         <div className="mt-10 ml-20">
           <h1 className=" w-[492px] text-3xl font-bold font-poppins text-gray_text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Tailored technology services to strengthen business operations.
           </h1>
           <p className="text-lg w-[569px] font-normal mt-8 mr-20 font-avenir text-balance text-gray_text">
             To drive profitable results by understanding the business process

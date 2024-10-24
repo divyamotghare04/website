@@ -29,7 +29,7 @@ function Contact() {
         </div>
       </div>
       <div className="ml-16">
-        <h1 className="font-poppins text-gray_text font-semibold xl:text-3xl lg:text-xl mt-[8rem]">
+        <h1 className="font-poppins text-gray_text mb-4 font-semibold xl:text-3xl lg:text-xl mt-[8rem]">
           Contact Information
         </h1>
         {/* <p className="font-avenir xl:text-lg lg:text-base">
@@ -37,6 +37,29 @@ function Contact() {
           eiusmod tempor incididunt
         </p> */}
       </div>
+      <h1 className="font-poppins ml-16">Mumbai Information</h1>
+      <div className="flex gap-10 ml-16 lg:mb-[2rem] xl:mb-[0.5rem]">
+        <div className="py-10">
+          <div className="ml-9">
+            <img src={contactImage4} />
+          </div>
+          <p>123-456-6578</p>
+        </div>
+        <div className="py-10">
+          <div className="ml-14 mb-1">
+            <img src={contactImage3} />
+          </div>
+          <p>info@dataweaver.in</p>
+        </div>
+        <div className="py-10">
+          <div className="ml-7">
+            <img src={contactImage2} />
+          </div>
+          <p>Mumbai, IN</p>
+        </div>
+      </div>
+      <h1 className="font-poppins ml-16">Poland Information</h1>
+
       <div className="flex gap-10 ml-16 lg:mb-[8rem] xl:mb-[12rem]">
         <div className="py-10">
           <div className="ml-9">
@@ -59,7 +82,7 @@ function Contact() {
       </div>
       <div className="flex mb-[10rem]">
         <div className="px-16">
-          <ContactForm />
+          {/* <ContactForm /> */}
         </div>
         <div>
           <div className="mb-4 xl:ml-[24.5rem] lg:ml-[2rem] font-poppins font-semibold text-xl">

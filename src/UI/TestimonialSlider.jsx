@@ -36,7 +36,7 @@ const testimonials = [
     title: "Managing Director",
     company: "Polynovo Biomaterials India Pvt. Ltd.",
     testimony:
-      "The Data Weaver LLP team has helped to implement Zoho across our organization, PolyNovo Biomaterials India Pvt. Ltd. Right from Day 1, they have seamlessly integrated all the applications so that our commercial operations run smoothly. They have been excellent from a response time and service levels standpoint. The Zoho CRM implementation has helped us to measure our commercial performance and helped the sales team to plan their daily routines in a very organized and structured manner. Darshil & Rudra have been a part of our team as they have gelled well with our commercial team. Their domain expertise lies in analytics and seamless integration of existing systems into Zoho. Our Australian counterparts in the Global organization have also been very appreciative of their work. Since our Global HQ follows the MYOB ERP system, we were always very apprehensive whether all the data would seamlessly integrate with their system. But the Data Weaver LLP team ensured that there are no hassles so that data flow from India to Australia is also managed seamlessly. I wish Data Weaver LLP the very best of luck for the future! Best regards,",
+      "Data Weaver LLP has been instrumental in successfully implementing Zoho across our organization, PolyNovo Biomaterials India Pvt. Ltd. From the beginning, they ensured seamless integration of applications, allowing our commercial operations to run smoothly. Their Zoho CRM implementation has improved how we measure performance and organize our sales team's routines. Darshil and Rudra have become integral to our team, working closely with our commercial division and demonstrating strong expertise in analytics and system integration. Even our Australian headquarters, which uses MYOB ERP, has appreciated their work, as Data Weaver ensured smooth data flow between India and Australia.",
   },
   {
     name: "",
@@ -93,8 +93,8 @@ const TestimonialSlider = () => {
   return (
     <div className="flex flex-col ">
       <div className="flex">
-        <div className="bg-white  px-4 flex flex-col items-center">
-          <div className="xl:w-[35rem]  h-[26rem]  bg-blue_team bg-opacity-10 p-6  shadow-lg">
+        <div className="bg-white  xl:ml-10 lg:ml-5 flex flex-col items-center">
+          <div className="xl:w-[35rem] lg:w-[22rem]  xl:h-[29rem] lg:h-[46rem] bg-blue_team bg-opacity-10 p-6  shadow-lg">
             <p className="text-gray_text text-lg font-inter mb-4">
               <RiDoubleQuotesL size={30} color="green" />
               {testimonials[currentIndex].testimony}{" "}
@@ -119,8 +119,8 @@ const TestimonialSlider = () => {
             </p>
           </div>
         </div>
-        <div className="bg-white  px-4 flex flex-col items-center">
-          <div className="xl:w-[35rem]  h-[26rem]  bg-blue_team bg-opacity-10 p-6  shadow-lg">
+        <div className="bg-white xl:ml-10 lg:ml-5 flex flex-col items-center">
+          <div className="xl:w-[35rem] lg:w-[22rem] xl:h-[29rem] lg:h-[46rem]  bg-blue_team bg-opacity-10 p-6  shadow-lg">
             <p className="text-gray_text text-lg font-inter mb-4">
               <RiDoubleQuotesL size={30} color="green" />
               {testimonials[currentIndex + 1].testimony}{" "}
@@ -146,11 +146,11 @@ const TestimonialSlider = () => {
           </div>
         </div>
       </div>
-      <div className="flex space-x-4 mt-6">
+      <div className="flex space-x-3 mt-6 xl:ml-10 lg:ml-6">
         <button
           onClick={handlePrevClick}
           disabled={currentIndex === 0}
-          className={`p-2  bg-white  border border-green text-green hover:bg-green hover:text-white hover:border-green disabled:bg-gray_line transition`}
+          className={`p-2 bg-white border border-green text-green hover:bg-green  hover:text-white disabled:bg-gray_line disabled:text-green disabled:border-green disabled:hover:bg-gray_line transition`}
         >
           <GoArrowLeft size={24} />
         </button>
