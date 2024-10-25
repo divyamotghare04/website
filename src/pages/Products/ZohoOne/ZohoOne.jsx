@@ -38,18 +38,18 @@ function ZohoOne() {
             Zoho One
           </h1>{" "}
           <p className="xl:w-[36rem] lg:w-[28rem] ml-10 xl:text-xl lg:text-base font-avenir text-gray_text">
-            Welcome to Dataweaver, where we elevate your business to new heights
-            with our expert IT and data analytics services. Partnering with Zoho
-            One, a cutting-edge suite of innovative applications, we offer a
-            tailored approach to maximize its potential for your unique business
-            requirements.
+            Welcome to Data Weaver, where we elevate your business to new
+            heights with our expert IT and data analytics services. Partnering
+            with Zoho One, a cutting-edge suite of innovative applications, we
+            offer a tailored approach to maximize its potential for your unique
+            business requirements.
           </p>
         </div>
-        <div className="flex flex-col mb-2 xl:w-[32rem] lg:w-[20rem] divide-y divide-gray_line">
+        <div className="flex flex-col mb-2 xl:w-[32rem] lg:w-[20rem] ">
           {navigation.map((item) => (
             <Link
               to={item.href}
-              className="xl:text-xl  font-semibold font-poppins flex  justify-between items-center p-2 text-gray_text"
+              className="xl:text-xl  border-b border-solid border-gray_line font-semibold font-poppins flex  justify-between items-center p-2 text-gray_text"
             >
               <button className="" key={item.name}>
                 {item.name}
@@ -64,11 +64,11 @@ function ZohoOne() {
       </div>
       <div className="flex items-center justify-center ">
         <h1 className="font-poppins xl:text-3xl lg:text-2xl font-bold mb-10">
-          At Dataweaver, we excel in....
+          At Data Weaver, we excel in....
         </h1>
       </div>
-      <div className="grid grid-cols-2 xl:mx-16 lg:mr-16 xl:gap-y-10 xl:px-20 xl:mb-[12.5rem]">
-        <div className="flex py-10 xl:w-[30rem] pl-5 border ml-10 items-start justify-center border-green">
+      <div className="grid grid-cols-2 xl:mx-16 lg:mr-16 lg:ml-5 xl:gap-y-10 lg:gap-y-10  xl:px-20 lg:px-3 xl:mb-[12.5rem]">
+        <div className="flex py-10 pl-5 border border-solid ml-10 items-start justify-center border-green">
           <img src={zohoImage2} />
           <div className="w-[25rem] ml-10">
             <h1 className="font-poppins mb-4 font-semibold xl:text-2xl lg:text-xl">
@@ -80,7 +80,7 @@ function ZohoOne() {
             </p>
           </div>
         </div>
-        <div className="flex py-10 xl:w-[30rem] pl-5 border ml-10 items-start justify-center border-green">
+        <div className="flex py-10 pl-5 border border-solid  ml-10 items-start justify-center border-green">
           <img src={zohoImage4} />
           <div className="w-[25rem] ml-10">
             <h1 className="font-poppins mb-4 font-semibold xl:text-2xl lg:text-xl">
@@ -93,7 +93,7 @@ function ZohoOne() {
             </p>
           </div>
         </div>
-        <div className="flex py-10 xl:w-[30rem] pl-5 border ml-10 items-start justify-center border-green">
+        <div className="flex py-10  pl-5 border border-solid  ml-10 items-start justify-center border-green">
           <img src={zohoImage5} />
           <div className="w-[25rem] ml-10">
             <h1 className="font-poppins mb-4 font-semibold xl:text-2xl lg:text-xl">
@@ -105,7 +105,7 @@ function ZohoOne() {
             </p>
           </div>
         </div>
-        <div className="flex py-10 xl:w-[30rem] pl-5 border ml-10 items-start justify-center border-green">
+        <div className="flex py-10  pl-5 border border-solid  ml-10 items-start justify-center border-green">
           <img src={zohoImage3} />
           <div className="w-[25rem] ml-10">
             <h1 className="font-poppins mb-4 font-semibold xl:text-2xl lg:text-xl">
@@ -125,16 +125,16 @@ function ZohoOne() {
         </div>
         <div className="w-[35rem] mr-10 text-gray_text">
           <h1 className="font-poppins font-bold xl:text-3xl lg:text-xl mb-5">
-            Experience the Dataweaver Difference
+            Experience the Data Weaver Difference
           </h1>
           <p className="xl:text-xl font-avenir text-gray_text mb-3">
             Discover how expert IT and data analytics, paired with unparalleled
-            customer support, can elevate your business. Join forces with
-            Dataweaver and Zoho One today and unlock your true potential.
+            customer support, can elevate your business. Join forces with Data
+            Weaver and Zoho One today and unlock your true potential.
           </p>{" "}
           <p className="xl:text-xl font-avenir text-gray_text">
             {" "}
-            At Dataweaver, we don't just offer services; we become your
+            At Data Weaver, we don't just offer services; we become your
             dedicated partner in business growth. By harnessing the full
             capabilities of Zoho One, we blend innovation with efficiency to
             propel your business forward.

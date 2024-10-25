@@ -12,6 +12,7 @@ import BlueBox from "../components/BlueBox";
 import FooterTop from "../UI/FooterTop";
 import TestimonialSlider from "../UI/TestimonialSlider";
 import ExpandingPanels from "../UI/ExpandingPanels";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -32,21 +33,23 @@ const Home = () => {
           <p className="xl:text-xl lg:text-base mt-8 text-gray_text font-avenir text-balance">
             Whether you’re a burgeoning startup or an established enterprise,
             <br />
-            Dataweaver has the blueprint for your success! <br />
+            Data Weaver has the blueprint for your success! <br />
             As seasoned IT consultants and Data Analysts, we specialize in
             crafting <br />
             tailor-made software solutions that empower your business to scale{" "}
             <br /> seamlessly and streamline operations efficiently. <br />
-            Seize the data and unlock its full potential with Dataweaver.
+            Seize the data and unlock its full potential with Data Weaver.
             <br />
             Experience the power of digital transformation today!
           </p>
           <div className="mt-16">
-            <ArrowButton
-              content="Let's connect"
-              color="green"
-              textColor="white"
-            />
+            <Link to="/contact">
+              <ArrowButton
+                content="Let's connect"
+                color="green"
+                textColor="white"
+              />
+            </Link>
           </div>
         </div>
         <div className="w-[50rem]">
@@ -76,7 +79,7 @@ const Home = () => {
           <h1 className=" xl:text-3xl lg:text-xl font-bold font-poppins text-gray_text">
             Born from Dreams, Powered
             <br /> by Innovation: Introducing
-            <br /> Dataweaver!
+            <br /> Data Weaver!
           </h1>
           <p className="xl:text-lg xl:w-[30rem] lg:w-[22rem] font-normal mt-8 font-avenir text-balance text-gray_text">
             Our story is one of relentless passion and unwavering commitment. We
@@ -85,7 +88,9 @@ const Home = () => {
             operations
           </p>
           <div className="mt-16">
+            <Link to="/about">
             <ArrowButton content="Know more" color="green" textColor="white" />
+            </Link>
           </div>
         </div>
       </div>
@@ -128,7 +133,7 @@ const Home = () => {
           <TestimonialSlider />
         </div>
       </div>
-      <FooterTop content="Join us in shaping the future of technology together! Experience the Dataweaver difference today." />
+      <FooterTop content="Join us in shaping the future of technology together! Experience the Data Weaver difference today." />
     </div>
   );
 };

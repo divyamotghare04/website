@@ -66,7 +66,7 @@ function Team() {
         </div>
         <div></div>
       </div>
-      <FooterTop content="Join us in shaping the future of technology together! Experience the Dataweaver difference today." />
+      <FooterTop content="Join us in shaping the future of technology together! Experience the Data Weaver difference today." />
     </div>
   );
 }

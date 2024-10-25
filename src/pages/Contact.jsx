@@ -65,13 +65,13 @@ function Contact() {
           <div className="ml-9">
             <img src={contactImage4} />
           </div>
-          <p>123-456-6578</p>
+          <p>+48 579133241</p>
         </div>
         <div className="py-10">
           <div className="ml-14 mb-1">
             <img src={contactImage3} />
           </div>
-          <p>info@dataweaver.in</p>
+          <p>maitrayeedave@dataweaver.in</p>
         </div>
         <div className="py-10">
           <div className="ml-7">

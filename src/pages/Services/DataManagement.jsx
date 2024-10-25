@@ -108,7 +108,7 @@ function DataManagement() {
         ))}
       </div>
       <div className="grid grid-cols-2 gap-10 mx-16 mb-[9.375rem]">
-        <div className="flex p-[0.625rem] border items-start justify-center border-green">
+        <div className="flex p-[0.625rem] border border-solid items-start justify-center border-green">
           <div className="w-[7rem]">
             <img src={dataImage6} />
           </div>
@@ -122,7 +122,7 @@ function DataManagement() {
             </p>
           </div>
         </div>
-        <div className="flex p-[0.625rem] border items-start justify-center border-green">
+        <div className="flex p-[0.625rem] border border-solid items-start justify-center border-green">
           <div className="w-[7rem]">
             <img src={dataImage5} />
           </div>
@@ -137,7 +137,7 @@ function DataManagement() {
             </p>
           </div>
         </div>
-        <div className="flex p-[0.625rem] border items-start justify-center border-green">
+        <div className="flex p-[0.625rem] border border-solid items-start justify-center border-green">
           <div className="w-[7rem]">
             <img src={dataImage4} />
           </div>
@@ -151,7 +151,7 @@ function DataManagement() {
             </p>
           </div>
         </div>
-        <div className="flex p-[0.625rem]  border items-start justify-center border-green">
+        <div className="flex p-[0.625rem]  border border-solid items-start justify-center border-green">
           <div className="w-[7rem]">
             <img src={dataImage3} />
           </div>

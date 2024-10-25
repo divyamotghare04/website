@@ -54,7 +54,7 @@ function ErpConsultation() {
         </h3>
       </div>
       <div className="flex xl:mx-20 xl:px-8 lg:mx-5  items-center mb-6">
-        <div className="xl:px-10 xl:py-8 lg:px-5 lg:py-4 border xl:w-[26rem] lg:w-[20rem] lg:h-[9rem] xl:h-[12rem] border-green mr-6 ">
+        <div className="xl:px-10 xl:py-8 lg:px-5 lg:py-4 border xl:w-[26rem] lg:w-[20rem] border-solid lg:h-[9rem] xl:h-[12rem] border-green mr-6 ">
           <h1 className="font-poppins font-semibold mb-4 xl:text-2xl lg:text-base">
             ERP Strategy Development:
           </h1>
@@ -62,7 +62,7 @@ function ErpConsultation() {
             Caft a roadmap for success with strategic planning and guidance.
           </p>
         </div>
-        <div className="xl:px-10 xl:py-8 lg:px-5 lg:py-4 border xl:w-[26rem] lg:w-[20rem] lg:h-[9rem] xl:h-[12rem] border-green  mr-6">
+        <div className="xl:px-10 xl:py-8 lg:px-5 lg:py-4 border xl:w-[26rem] lg:w-[20rem] border-solid lg:h-[9rem] xl:h-[12rem] border-green  mr-6">
           <h1 className="font-poppins font-semibold mb-4 xl:text-2xl lg:text-base">
             ERP Software Selection and Implementation:
           </h1>
@@ -71,7 +71,7 @@ function ErpConsultation() {
             seamlessly.
           </p>
         </div>{" "}
-        <div className="xl:px-10 xl:py-8 lg:px-5 lg:py-4  xl:w-[26rem] lg:w-[20rem] lg:h-[9rem] xl:h-[12rem] border border-green ">
+        <div className="xl:px-10 xl:py-8 lg:px-5 lg:py-4  xl:w-[26rem] lg:w-[20rem] lg:h-[9rem] border-solid xl:h-[12rem] border border-green ">
           <h1 className="font-poppins font-semibold mb-4 xl:text-2xl lg:text-base">
             ERP Upgrades and Replacement:
           </h1>
@@ -82,7 +82,7 @@ function ErpConsultation() {
         </div>
       </div>
       <div className="flex justify-center mb-[10rem]">
-        <div className="xl:px-10 xl:py-8 lg:px-5 lg:py-4 border w-[26rem] lg:h-[9rem] xl:h-[12rem] border-green mr-6">
+        <div className="xl:px-10 xl:py-8 lg:px-5 lg:py-4 border w-[26rem] lg:h-[9rem] xl:h-[12rem] border-solid border-green mr-6">
           <h1 className="font-poppins font-semibold mb-4 xl:text-2xl lg:text-base">
             ERP Solution Customization:
           </h1>
@@ -90,7 +90,7 @@ function ErpConsultation() {
             Tailor your ERP system to fit your business like a glove.
           </p>
         </div>
-        <div className="xl:px-10 xl:py-8 lg:px-5 lg:py-4 border xl:w-[26rem] lg:h-[9rem] xl:h-[12rem] lg:w-[20rem] border-green ">
+        <div className="xl:px-10 xl:py-8 lg:px-5 lg:py-4 border xl:w-[26rem] lg:h-[9rem] xl:h-[12rem] border-solid lg:w-[20rem] border-green ">
           <h1 className="font-poppins font-semibold mb-4 xl:text-2xl lg:text-base">
             ERP Assessment and Evaluation:
           </h1>

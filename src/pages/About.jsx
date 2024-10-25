@@ -38,7 +38,7 @@ const StatItem = ({ value, label, shouldAnimate }) => {
   const count = useCountUp(value, 1000, shouldAnimate);
 
   return (
-    <div className="h-[86px] w-[87px]">
+    <div className="h-[2rem] w-[2rem]">
       <h1 className="font-poppins font-bold text-4xl text-green">{count}+</h1>
       <p className="text-2xl font-avenir">{label}</p>
     </div>
@@ -76,7 +76,7 @@ function About() {
         <div className="mt-[10rem] mb-10">
           <h1 className="ml-16 font-extrabold xl:text-4xl lg:text-2xl font-inter text-black">
             <div className="mb-2"> Born from Dreams, Powered by</div>
-            <div>Innovation: Introducing Dataweaver!</div>
+            <div>Innovation: Introducing Data Weaver!</div>
           </h1>
         </div>
         <div className=" ">
@@ -87,7 +87,7 @@ function About() {
           />
         </div>
 
-        <div className="overflow-hidden  bg-gradient-to-r from-secondary to-primary">
+        <div className="overflow-hidden  border-b-4 shadow-lg  border-solid  border-white">
           <div className="flex marquee animate-marquee">
             {brandLogos.map((logo, index) => (
               <div
@@ -142,7 +142,7 @@ function About() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center m-10">
+      <div className="flex justify-center items-center mt-10 mx-10 mb-20">
         <div
           ref={ref}
           className="flex w-[600px] justify-between text-center items-center p-10 bg-white "
@@ -152,20 +152,20 @@ function About() {
           <StatItem value={10} label="Teams" shouldAnimate={shouldAnimate} />
         </div>
       </div>
-      <div className="flex items-center ml-16 mb-[156px]">
-        <div className="w-[518px] h-[508px] flex flex-col justify-between">
+      <div className="flex items-center ml-16 mb-[11rem]">
+        <div className="xl:w-[32.5rem] mr-10 lg:w-[25rem] lg:h-[25rem] xl:h-[32rem] flex flex-col justify-between">
           <div className="flex justify-between">
             <BlueBox text2="OUR MISSION" className=" w-full h-full" />
-            <img src={aboutImage2} />
+            <img src={aboutImage2} className="xl:w-[15rem] lg:w-[11rem]" />
           </div>
           <img src={aboutImage3} />
         </div>
 
-        <div className="mt-10 ml-20">
-          <h1 className=" w-[492px] text-3xl font-bold font-poppins text-gray_text">
-            Dataweaver, driven by passion and enthusiasm.
+        <div className="mt-10 ml-20 xl:w-[30rem] lg:w-[25rem]">
+          <h1 className=" xl:text-3xl lg:text-2xl font-bold font-poppins text-gray_text">
+            Data Weaver, driven by passion and enthusiasm.
           </h1>
-          <p className="text-lg w-[569px] font-normal mt-8 font-avenir text-balance text-gray_text">
+          <p className="xl:text-lg w-[] font-normal mt-8 font-avenir text-balance text-gray_text">
             We specialise in taking your business digital, by optimizing the
             processes & simplifying your digital journey. Our qualified team of
             professionals, is just the right ones, who vision the potential of
@@ -173,22 +173,22 @@ function About() {
           </p>
         </div>
       </div>
-      <div className="flex items-center justify-end mb-[156px]  mx-16">
-        <div className="mt-10 ml-20">
-          <h1 className=" w-[492px] text-3xl font-bold font-poppins text-gray_text">
+      <div className="flex items-center justify-end mb-[10rem]  xl:mx-16 lg:mr-10">
+        <div className="mt-10 xl:ml-20 lg:mr-20 xl:w-[30rem] lg:w-[25rem]">
+          <h1 className=" xl:text-3xl lg:text-2xl font-bold font-poppins text-gray_text">
             Tailored technology services to strengthen business operations.
           </h1>
-          <p className="text-lg w-[569px] font-normal mt-8 mr-20 font-avenir text-balance text-gray_text">
+          <p className="xl:text-lg w-[] font-normal mt-8 font-avenir text-balance text-gray_text">
             To drive profitable results by understanding the business process
             and unravelling the best suited solutions. We visualize to help you
             expand & boost your business, by consulting suitable digital
             strategies & software that accelerates business growth.
           </p>
         </div>
-        <div className="w-[518px] h-[508px] flex flex-col justify-between">
+        <div className="xl:w-[32.5rem] mr-10 lg:w-[25rem] lg:h-[25rem] xl:h-[32rem] flex flex-col justify-between">
           <div className="flex justify-between">
             <BlueBox text2="OUR VISION" className="  w-full h-full" />
-            <img src={aboutImage2} />
+            <img src={aboutImage2} className="xl:w-[15rem] lg:w-[11rem]" />
           </div>
           <img src={aboutImage3} />
         </div>
@@ -196,57 +196,65 @@ function About() {
       <div className="flex mb-16 ml-16">
         <BlueBox text2="OUR PROCESS" className="w-full h-full" />
       </div>
-      <div className="flex justify-between items-start w-[1115px] h-[252px] mx-[200px] mb-[300px]">
+      <div className="flex justify-between items-start w-[full] h-[9rem] xl:mx-[11rem] lg:mx-[8rem] xl:mb-[30rem] lg:mb-[20rem]">
         <div className="">
           <img src={aboutImage4} />
-          <div className="py-2 mx-2 w-[150px] mt-3">
-            <h1 className="text-gray_text font-bold text-2xl  mb-4">
+          <div className="py-2 mx-2 w-[10rem] mt-3">
+            <h1 className="text-gray_text xl:font-bold lg:font-semibold xl:text-2xl lg:text-xl mb-4">
               UNDERSTAND
             </h1>
-            <p className="text-2xl font-avenir text-gray_text">
+            <p className="xl:text-2xl lg:text-lg font-avenir text-gray_text">
               your business process
             </p>
           </div>
         </div>
         <div className="">
           <img src={aboutImage5} />
-          <div className="py-2 mx-2 w-[165px] mt-3">
-            <h1 className="font-bold text-2xl text-gray_text  mb-4">
+          <div className="py-2 mx-2 w-[10rem] mt-3">
+            <h1 className="text-gray_text xl:font-bold lg:font-semibold xl:text-2xl lg:text-xl mb-4">
               EVALUATE
             </h1>
-            <p className="text-2xl font-avenir text-gray_text">
+            <p className="xl:text-2xl lg:text-lg font-avenir text-gray_text">
               the bottleneck
             </p>
           </div>
         </div>{" "}
         <div className="">
           <img src={aboutImage6} />
-          <div className="py-2 mx-2 w-[120px] mt-6">
-            <h1 className="font-bold text-2xl text-gray_text mb-4">
+          <div className="py-2 mx-2 w-[10rem] mt-6">
+            <h1 className="text-gray_text xl:font-bold lg:font-semibold xl:text-2xl lg:text-xl mb-4">
               STRATEGISE
             </h1>
-            <p className="text-2xl font-avenir text-gray_text">
+            <p className="xl:text-2xl lg:text-lg font-avenir text-gray_text">
               and provide Top-notch solutions
             </p>
           </div>
         </div>{" "}
         <div className="">
           <img className="w-[93px] h-[78px] " src={aboutImage8} />
-          <div className="py-2 mx-2 w-[130px] mt-4">
-            <h1 className="font-bold text-2xl text-gray_text  mb-4">EXECUTE</h1>
-            <p className="text-2xl font-avenir text-gray_text">the strategy</p>
+          <div className="py-2 mx-2 w-[10rem] mt-4">
+            <h1 className="text-gray_text xl:font-bold lg:font-semibold xl:text-2xl lg:text-xl mb-4">
+              EXECUTE
+            </h1>
+            <p className="xl:text-2xl lg:text-lg font-avenir text-gray_text">
+              the strategy
+            </p>
           </div>
         </div>{" "}
         <div className="">
           <img className="size[75px]" src={aboutImage7} />
-          <div className="py-2 mx-2 w-[165px] mt-4">
-            <h1 className="font-bold text-2xl text-gray_text  mb-4">DEPLOY</h1>
-            <p className="text-2xl font-avenir text-gray_text">the software</p>
+          <div className="py-2 mx-2 w-[10rem] mt-4">
+            <h1 className="text-gray_text xl:font-bold lg:font-semibold xl:text-2xl lg:text-xl mb-4">
+              DEPLOY
+            </h1>
+            <p className="xl:text-2xl lg:text-lg font-avenir text-gray_text">
+              the software
+            </p>
           </div>
         </div>
       </div>
 
-      <FooterTop content="Join us in shaping the future of technology together! Experience the Dataweaver difference today." />
+      <FooterTop content="Join us in shaping the future of technology together! Experience the Data Weaver difference today." />
     </div>
   );
 }

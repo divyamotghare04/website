@@ -39,8 +39,8 @@ const testimonials = [
       "Data Weaver LLP has been instrumental in successfully implementing Zoho across our organization, PolyNovo Biomaterials India Pvt. Ltd. From the beginning, they ensured seamless integration of applications, allowing our commercial operations to run smoothly. Their Zoho CRM implementation has improved how we measure performance and organize our sales team's routines. Darshil and Rudra have become integral to our team, working closely with our commercial division and demonstrating strong expertise in analytics and system integration. Even our Australian headquarters, which uses MYOB ERP, has appreciated their work, as Data Weaver ensured smooth data flow between India and Australia.",
   },
   {
-    name: "",
-    title: "",
+    name: "Yogesh Motiani",
+    title: "Director",
     company: "Gem Plaza LLC",
     testimony:
       "Our experience with the Data Weaver Team in implementing Zoho Analytics for our company has been exceptional. Their expertise and seamless integration have significantly enhanced our data analysis capabilities, providing valuable insights into our operations. The team's responsiveness and commitment to understanding our specific needs ensured a tailored solution that aligns perfectly with our business objectives. The implementation process was efficient, minimizing disruptions, and the post-implementation support has been prompt and reliable. Overall, the Data Weaver Team has played a crucial role in optimizing our data management, contributing positively to our company's efficiency and decision-making processes.",
@@ -53,25 +53,32 @@ const testimonials = [
       "Darshil has understood our requirements very well and developed the CRM for us. All the points discussed by us to him for incorporating in the CRM were taken care of and would highly recommend them!",
   },
   {
-    name: "",
-    title: "",
+    name: "Suresh Shah",
+    title: "Managing Director",
     company: "Sanimo Polymers Pvt. Ltd",
     testimony:
       "Data Weaver has delivered outstanding customized reports for our customized ERP. Their expertise and attention to detail were exceptional, significantly improving our data analysis capabilities. Communication was excellent, and the results have enhanced our decision-making. Highly recommended for any Zoho-related services.",
   },
   {
-    name: "",
+    name: "Robin Mathew",
     title: "",
     company: "S&J Sales Corporation",
     testimony:
       "The team at Data Weaver are true professionals. We've been associated with them for over 2 years now and they never cease to exceed our expectations in terms of deliverables ! A key pointer is their expertise with Zoho Analytics and we've used their services to design some complex reports and dashboards which have aided our decision making. I highly recommend them.",
   },
   {
-    name: "",
-    title: "",
+    name: "Anoop Motiani",
+    title: "Director",
     company: "Gardenia Cosmotrade LLP",
     testimony:
       "The implementation of Zoho Analytics in our company has been a resounding success by Data Weaver Team. The tool has revolutionized our data analysis, providing valuable insights and streamlining decision-making. The centralized data integration, intuitive visualizations, and robust reporting capabilities have significantly improved our operational efficiency. The support and customer service received from the Data Weaver team have been exceptional. We are grateful for their expertise and commitment to our success.",
+  },
+  {
+    name: "Aly Tejani",
+    title: "Director",
+    company: "A & U Dental",
+    testimony:
+      "I would recommend the Data Weaver Team highly. Their service is professional and the team always delivers on time! We will continue to work with them on future developments throughout the lifetime of our organization given their expertise and flexibility. The best team out there for data analytics!",
   },
 ];
 
@@ -87,17 +94,21 @@ const TestimonialSlider = () => {
   const handleNextClick = () => {
     if (currentIndex < testimonials.length - 2) {
       setCurrentIndex(currentIndex + 2);
+    } else if (currentIndex === testimonials.length - 2) {
+      setCurrentIndex(currentIndex + 1);
     }
   };
 
+  const isLastItem = currentIndex === testimonials.length - 1;
+
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col">
       <div className="flex">
-        <div className="bg-white  xl:ml-10 lg:ml-5 flex flex-col items-center">
-          <div className="xl:w-[35rem] lg:w-[22rem]  xl:h-[29rem] lg:h-[46rem] bg-blue_team bg-opacity-10 p-6  shadow-lg">
+        <div className="bg-white xl:ml-10 lg:ml-5 flex flex-col items-center">
+          <div className="xl:w-[35rem] lg:w-[22rem] xl:h-[29rem] lg:h-[46rem] bg-blue_team bg-opacity-10 p-6 shadow-lg">
             <p className="text-gray_text text-lg font-inter mb-4">
               <RiDoubleQuotesL size={30} color="green" />
-              {testimonials[currentIndex].testimony}{" "}
+              {testimonials[currentIndex].testimony}
               <div className="flex justify-between">
                 <h1></h1>
                 <RiDoubleQuotesL
@@ -119,45 +130,49 @@ const TestimonialSlider = () => {
             </p>
           </div>
         </div>
-        <div className="bg-white xl:ml-10 lg:ml-5 flex flex-col items-center">
-          <div className="xl:w-[35rem] lg:w-[22rem] xl:h-[29rem] lg:h-[46rem]  bg-blue_team bg-opacity-10 p-6  shadow-lg">
-            <p className="text-gray_text text-lg font-inter mb-4">
-              <RiDoubleQuotesL size={30} color="green" />
-              {testimonials[currentIndex + 1].testimony}{" "}
-              <div className="flex justify-between">
-                <h1></h1>
-                <RiDoubleQuotesL
-                  size={30}
-                  color="green"
-                  className="transform scale-x-[-1]"
-                />
-              </div>
-            </p>
-          </div>
 
-          <div className="text-primary mt-4">
-            <h4 className="font-bold font-poppins">
-              {testimonials[currentIndex + 1].name}
-            </h4>
-            <p className="text-sm">{testimonials[currentIndex + 1].title}</p>
-            <p className="font-semibold font-poppins">
-              {testimonials[currentIndex + 1].company}
-            </p>
+        {!isLastItem && (
+          <div className="bg-white xl:ml-10 lg:ml-5 flex flex-col items-center">
+            <div className="xl:w-[35rem] lg:w-[22rem] xl:h-[29rem] lg:h-[46rem] bg-blue_team bg-opacity-10 p-6 shadow-lg">
+              <p className="text-gray_text text-lg font-inter mb-4">
+                <RiDoubleQuotesL size={30} color="green" />
+                {testimonials[currentIndex + 1].testimony}
+                <div className="flex justify-between">
+                  <h1></h1>
+                  <RiDoubleQuotesL
+                    size={30}
+                    color="green"
+                    className="transform scale-x-[-1]"
+                  />
+                </div>
+              </p>
+            </div>
+
+            <div className="text-primary mt-4">
+              <h4 className="font-bold font-poppins">
+                {testimonials[currentIndex + 1].name}
+              </h4>
+              <p className="text-sm">{testimonials[currentIndex + 1].title}</p>
+              <p className="font-semibold font-poppins">
+                {testimonials[currentIndex + 1].company}
+              </p>
+            </div>
           </div>
-        </div>
+        )}
       </div>
+
       <div className="flex space-x-3 mt-6 xl:ml-10 lg:ml-6">
         <button
           onClick={handlePrevClick}
           disabled={currentIndex === 0}
-          className={`p-2 bg-white border border-green text-green hover:bg-green  hover:text-white disabled:bg-gray_line disabled:text-green disabled:border-green disabled:hover:bg-gray_line transition`}
+          className="p-2 bg-white border border-green text-green hover:bg-green hover:text-white disabled:bg-gray_line disabled:text-green disabled:border-green disabled:hover:bg-gray_line transition"
         >
           <GoArrowLeft size={24} />
         </button>
         <button
           onClick={handleNextClick}
-          disabled={currentIndex >= testimonials.length - 2}
-          className={`p-2 bg-white border border-green text-green hover:bg-green  hover:text-white disabled:bg-gray_line disabled:text-green disabled:border-green disabled:hover:bg-gray_line transition`}
+          disabled={currentIndex >= testimonials.length - 1}
+          className="p-2 bg-white border border-green text-green hover:bg-green hover:text-white disabled:bg-gray_line disabled:text-green disabled:border-green disabled:hover:bg-gray_line transition"
         >
           <GoArrowRight size={24} />
         </button>
