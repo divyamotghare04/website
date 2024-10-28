@@ -1,9 +1,7 @@
-import React from "react";
-
+import React, { useEffect } from "react";
 import homeImage1 from "../assets/homeImage1.png";
 import homeImage2 from "../assets/homeImage2.png";
 import homeImage3 from "../assets/homeImage3.png";
-
 import horizontalLogo from "../assets/horizontal_logo.png";
 import rec from "../assets/rec.png";
 import Navbar from "../UI/Navbar";
@@ -13,21 +11,33 @@ import FooterTop from "../UI/FooterTop";
 import TestimonialSlider from "../UI/TestimonialSlider";
 import ExpandingPanels from "../UI/ExpandingPanels";
 import { Link } from "react-router-dom";
+import { reveal } from "../utils/helper";
 
 const Home = () => {
+  useEffect(() => {
+    // Call the reveal function when component mounts
+    reveal();
+    window.addEventListener("scroll", reveal);
+
+    // Clean up event listener on unmount
+    return () => window.removeEventListener("scroll", reveal);
+  }, []);
+
   return (
     <div className="">
       <img alt="" src={rec} className="top-img " />
-
       <Navbar logo={horizontalLogo} img={rec} color="black" />
-      <div className="flex ">
+
+      <div className="flex reveal">
+        {" "}
+        {/* Add reveal class */}
         <div className="mt-[18rem] ml-16">
-          <h1 className=" xl:text-7xl xl:w-[50rem] lg:w-[33rem] lg:text-5xl font-extrabold font-poppins text-blue_text">
+          <h1 className="xl:text-7xl xl:w-[50rem] lg:w-[33rem] lg:text-5xl font-extrabold font-poppins text-blue_text">
             <div className="mb-3"> Simplify the process,</div>
             <div> Optimize the growth</div>
           </h1>
           <br />
-          <h1 className="lg:w-[32rem] xl:w-[38rem]  mt-2 xl:text-3xl lg:text-2xl font-medium font-playfair_display text-gray_text">
+          <h1 className="lg:w-[32rem] xl:w-[38rem] mt-2 xl:text-3xl lg:text-2xl font-medium font-playfair_display text-gray_text">
             Ready to Transform Your Business Digitally?
           </h1>
           <p className="xl:text-xl lg:text-base mt-8 text-gray_text font-avenir text-balance">
@@ -56,83 +66,77 @@ const Home = () => {
           <img
             alt=""
             src={homeImage1}
-            className="  xl:w-[42rem] xl:h-[56rem]  lg:w-[44rem] lg:h-[36rem]"
+            className="xl:w-[42rem] xl:h-[56rem] lg:w-[44rem] lg:h-[36rem] reveal" // Add reveal class
           />
         </div>
       </div>
-      <div className="flex items-center mt-[12rem] ml-16 mb-[12rem]">
-        <div className="xl:w-[32.5rem] xl:h-[32rem]  lg:w-[25rem] lg:h-[24.5rem] flex flex-col justify-between">
+
+      <div className="flex items-center mt-[12rem] ml-16 mb-[12rem] reveal">
+        {" "}
+        {/* Add reveal class */}
+        <div className="xl:w-[32.5rem] xl:h-[32rem] lg:w-[25rem] lg:h-[24.5rem] flex flex-col justify-between">
           <div className="flex justify-between">
             <BlueBox
               text1="WHO"
               text2="ARE WE"
-              className=" xl:w-full xl:h-full"
+              className="xl:w-full xl:h-full"
             />
             <div className="lg:w-[11.5rem] xl:w-[15rem]">
-              <img src={homeImage2} />
+              <img src={homeImage2} className="reveal" />{" "}
+              {/* Add reveal class */}
             </div>
           </div>
-          <img src={homeImage3} />
+          <img src={homeImage3} className="reveal" /> {/* Add reveal class */}
         </div>
-
-        <div className=" ml-20 ">
-          <h1 className=" xl:text-3xl lg:text-xl font-bold font-poppins text-gray_text">
-            Born from Dreams, Powered
-            <br /> by Innovation: Introducing
-            <br /> Data Weaver!
+        <div className="ml-20">
+          <h1 className="xl:text-3xl lg:text-xl font-bold font-poppins text-gray_text">
+            Born from Dreams, Powered <br /> by Innovation: Introducing <br />{" "}
+            Data Weaver!
           </h1>
           <p className="xl:text-lg xl:w-[30rem] lg:w-[22rem] font-normal mt-8 font-avenir text-balance text-gray_text">
             Our story is one of relentless passion and unwavering commitment. We
             offer an extensive array of technology services and IT solutions
             meticulously designed to fortify and enhance our clients’ business
-            operations
+            operations.
           </p>
           <div className="mt-16">
             <Link to="/about">
-            <ArrowButton content="Know more" color="green" textColor="white" />
+              <ArrowButton
+                content="Know more"
+                color="green"
+                textColor="white"
+              />
             </Link>
           </div>
         </div>
       </div>
-      <div className="relative">
+
+      <div className="relative reveal">
+        {" "}
+        {/* Add reveal class */}
         <div className="flex ml-16 mb-[12rem]">
           <BlueBox
-            text1="WHAT "
+            text1="WHAT"
             text2="WE OFFER"
             className="xl:w-full xl:h-[40rem]"
           />
-          {/* <div>
-            <div className="flex w-[40rem] h-[40rem]">
-              <div className="w-[8rem] h-[30rem] bg-blue_home text-white font-bold font-poppins text-xl relative ml-[2rem]">
-                <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 whitespace-nowrap origin-center -rotate-90">
-                  ZOHO Customisation
-                </h1>
-              </div>
-              <div className="w-[8rem] h-[30rem] bg-blue_home text-white font-bold font-poppins text-xl relative ml-[2rem]">
-                <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 whitespace-nowrap origin-center -rotate-90">
-                  ERP
-                </h1>
-              </div>
-              <div className="w-[8rem] h-[30rem] bg-blue_home text-white font-bold font-poppins text-xl relative ml-[2rem]">
-                <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 whitespace-nowrap origin-center -rotate-90">
-                  DATA MANAGEMENT
-                </h1>
-              </div>
-            </div>
-          </div> */}
           <ExpandingPanels />
         </div>
       </div>
-      <div className="flex ml-16 mb-[12rem]">
+
+      <div className="flex ml-16 mb-[12rem] reveal">
+        {" "}
+        {/* Add reveal class */}
         <BlueBox
           text1="WHAT OUR"
           text2="CLIENTS SAY"
-          className=" w-full h-full "
+          className="w-full h-full"
         />
         <div>
           <TestimonialSlider />
         </div>
       </div>
+
       <FooterTop content="Join us in shaping the future of technology together! Experience the Data Weaver difference today." />
     </div>
   );

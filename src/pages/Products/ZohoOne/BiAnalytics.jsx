@@ -6,16 +6,27 @@ import biAnalyticsImage1 from "../../../assets/biAnalyticsImage1.png";
 import biAnalyticsImage2 from "../../../assets/biAnalyticsImage2.png";
 import AccordionCustomAnimation from "../../../components/AccordianCustomAnimation";
 
-import { biAnalyticsAccordianArray } from "../../../utils/helper";
+import { biAnalyticsAccordianArray, reveal } from "../../../utils/helper";
+import { useEffect } from "react";
 
 function BiAnalytics() {
+  useEffect(() => {
+    // Call the reveal function on mount
+    reveal();
+
+    // Attach scroll event listener
+    window.addEventListener("scroll", reveal);
+
+    // Cleanup event listener on unmount
+    return () => window.removeEventListener("scroll", reveal);
+  }, []);
   return (
     <div>
       <Navbar logo={blueLogo} />
 
-      <div className="flex flex-col mb-[150px]">
-        <div className="mt-[157px] mb-10">
-          <h1 className="ml-16 font-extrabold text-4xl font-inter text-black">
+      <div className="flex flex-col mb-[10rem] reveal">
+        <div className="mt-[10rem] mb-10">
+          <h1 className="ml-16 font-extrabold xl:text-4xl lg:text-3xl font-inter text-black">
             BI & Analytics
           </h1>
         </div>
@@ -28,7 +39,7 @@ function BiAnalytics() {
         </div>
       </div>
 
-      <div className="flex mx-20 mb-[200px]">
+      <div className="flex mx-20 mb-[12rem] reveal">
         <div className="ml-10">
           <img src={biAnalyticsImage2} />
         </div>

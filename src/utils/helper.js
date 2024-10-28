@@ -138,3 +138,73 @@ export const biAnalyticsAccordianArray = [
     key: 3,
   },
 ];
+
+export const reveal = () => {
+  const reveals = document.querySelectorAll(".reveal");
+
+  for (let i = 0; i < reveals.length; i++) {
+    const windowHeight = window.innerHeight;
+    const elementTop = reveals[i].getBoundingClientRect().top;
+    const elementVisible = 100; 
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active"); 
+    } else {
+      reveals[i].classList.remove("active"); 
+    }
+  }
+};
+
+// Attach scroll event listener
+window.addEventListener("scroll", reveal);
+
+window.addEventListener("load", () => {
+  document.querySelector("body").classList.add("loaded");
+});
+
+function animateValue(obj, start, end, duration) {
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    obj.innerHTML = Math.floor(progress * (end - start) + start) + "+";
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+  window.requestAnimationFrame(step);
+}
+
+function startCounter() {
+  const project = document.getElementById("projects");
+  animateValue(project, 1, 25, 1300);
+
+  const client = document.getElementById("clients");
+  animateValue(client, 1, 15, 1300);
+
+  const team = document.getElementById("teams");
+  animateValue(team, 1, 10, 1300);
+}
+
+let count = 0;
+var observer = new IntersectionObserver(
+  function (entries) {
+    // isIntersecting is true when element and viewport are overlapping
+    // isIntersecting is false when element and viewport don't overlap
+    if (entries[0].isIntersecting === true) {
+      count === 0 && startCounter();
+      count += 1;
+    }
+  },
+  { threshold: [0] }
+);
+
+var cards = document.querySelectorAll(".card");
+
+[...cards].forEach((card) => {
+  card.addEventListener("click", function () {
+    card.classList.toggle("is-flipped");
+  });
+});
+
+// observer.observe(document.querySelector("#projects"));

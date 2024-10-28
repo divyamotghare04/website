@@ -11,6 +11,8 @@ import zohoImage4 from "../../../assets/zohoImage4.svg";
 import zohoImage5 from "../../../assets/zohoImage5.svg";
 import zohoImage6 from "../../../assets/zohoImage6.png";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { reveal } from "../../../utils/helper";
 
 const navigation = [
   { name: "Sales", href: "/products/zoho-one/sales" },
@@ -21,18 +23,29 @@ const navigation = [
 ];
 
 function ZohoOne() {
+  useEffect(() => {
+    // Call the reveal function on mount
+    reveal();
+
+    // Attach scroll event listener
+    window.addEventListener("scroll", reveal);
+
+    // Cleanup event listener on unmount
+    return () => window.removeEventListener("scroll", reveal);
+  }, []);
+
   return (
     <div>
       <Navbar logo={horizontalBlueLogo} />
-      <h1 className="mt-[10rem] mb-20 font-inter font-extrabold text-4xl ml-16">
+      <h1 className="mt-[10rem] mb-20 font-inter font-extrabold text-4xl ml-16 reveal">
         Our Products
       </h1>
 
-      <div className="mb-20">
+      <div className="mb-20 reveal">
         <img src={zohoImage1} alt="zoho one image" className="w-full h-auto" />
       </div>
 
-      <div className="flex justify-between items-center mx-9 mb-20 ">
+      <div className="flex justify-between items-center mx-9 mb-20 reveal">
         <div>
           <h1 className="font-poppins mb-3 font-bold xl:text-3xl lg:text-2xl text-gray_text ml-10">
             Zoho One
@@ -62,12 +75,12 @@ function ZohoOne() {
           ))}
         </div>
       </div>
-      <div className="flex items-center justify-center ">
+      <div className="flex items-center justify-center reveal">
         <h1 className="font-poppins xl:text-3xl lg:text-2xl font-bold mb-10">
           At Data Weaver, we excel in....
         </h1>
       </div>
-      <div className="grid grid-cols-2 xl:mx-16 lg:mr-16 lg:ml-5 xl:gap-y-10 lg:gap-y-10  xl:px-20 lg:px-3 xl:mb-[12.5rem]">
+      <div className="grid grid-cols-2 xl:mx-16 lg:mr-16 lg:ml-5 xl:gap-y-10 lg:gap-y-10  xl:px-20 lg:px-3 xl:mb-[12.5rem] reveal">
         <div className="flex py-10 pl-5 border border-solid ml-10 items-start justify-center border-green">
           <img src={zohoImage2} />
           <div className="w-[25rem] ml-10">
@@ -119,7 +132,7 @@ function ZohoOne() {
           </div>
         </div>
       </div>
-      <div className="mt-20 flex justify-between items-center mx-16 h-[30rem] mb-[13rem]">
+      <div className="mt-20 flex justify-between items-center mx-16 h-[30rem] mb-[13rem] reveal">
         <div className=" mr-16 ">
           <img src={zohoImage6} />
         </div>

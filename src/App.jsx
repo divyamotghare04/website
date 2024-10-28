@@ -18,10 +18,12 @@ import Marketing from "./pages/Products/ZohoOne/Marketing";
 import Finance from "./pages/Products/ZohoOne/Finance";
 import Sales from "./pages/Products/ZohoOne/Sales";
 import ErpNext from "./pages/Products/ErpNext";
+import ScrollToTop from "./UI/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route element={<AppLayout />}>
           <Route path="/" index element={<Home />} />

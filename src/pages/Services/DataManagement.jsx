@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from "react";
+import { reveal } from "../../utils/helper";
 import Navbar from "../../UI/Navbar";
 import logoBlue from "../../assets/horizontal_blue_logo.png";
 import dataImage1 from "../../assets/dataImage1.png";
@@ -9,9 +11,7 @@ import dataImage6 from "../../assets/dataImage6.png";
 import dataImage7 from "../../assets/dataImage7.png";
 import dataImage8 from "../../assets/dataImage8.png";
 import dataImage9 from "../../assets/dataImage9.png";
-
 import FooterTop from "../../UI/FooterTop";
-import { useState } from "react";
 
 function DataManagement() {
   const [activeTab, setActiveTab] = useState("Strategic Insights");
@@ -50,14 +50,25 @@ function DataManagement() {
     },
   };
 
+  useEffect(() => {
+    // Call the reveal function on mount
+    reveal();
+
+    // Attach scroll event listener
+    window.addEventListener("scroll", reveal);
+
+    // Cleanup event listener on unmount
+    return () => window.removeEventListener("scroll", reveal);
+  }, []);
+
   return (
     <div>
       <Navbar logo={logoBlue} />
       <div className="flex justify-between mt-[9.8125rem] px-16 mb-12">
-        <h1 className="font-inter font-extrabold xl:text-4xl lg:text-2xl">
+        <h1 className="font-inter font-extrabold xl:text-4xl lg:text-2xl reveal">
           Data Management
         </h1>
-        <p className="font-avenir xl:text-xl lg:text-base text-gray_text">
+        <p className="font-avenir xl:text-xl lg:text-base text-gray_text reveal">
           In today's data-driven world, success hinges on the ability to harness
           the full <br /> potential of your data. At Data Weaver, we understand
           that managing data isn't <br /> just about storage—it's about
@@ -67,10 +78,14 @@ function DataManagement() {
       </div>
 
       <div className="mb-[4.375rem]">
-        <img src={dataImage1} alt="Base image" className="w-full h-auto" />
+        <img
+          src={dataImage1}
+          alt="Base image"
+          className="w-full h-auto reveal"
+        />
       </div>
-      <div className="mb-[9.375rem]">
-        <div className="flex gap-12 justify-center mb-[7.5rem]">
+      <div className="mb-[9.375rem] reveal">
+        <div className="flex gap-12 justify-center mb-[7.5rem] ">
           {tabs.map((tab) => (
             <button
               key={tab}
@@ -89,7 +104,7 @@ function DataManagement() {
         {tabs.map((tab) => (
           <div
             key={tab}
-            className={`flex xl:mx-[10rem] lg:mx-16 items-center justify-between ${
+            className={`flex xl:mx-[10rem] lg:mx-16 items-center justify-between  ${
               activeTab === tab ? "block" : "hidden"
             }`}
           >
@@ -108,7 +123,7 @@ function DataManagement() {
         ))}
       </div>
       <div className="grid grid-cols-2 gap-10 mx-16 mb-[9.375rem]">
-        <div className="flex p-[0.625rem] border border-solid items-start justify-center border-green">
+        <div className="flex p-[0.625rem] border border-solid items-start justify-center border-green reveal">
           <div className="w-[7rem]">
             <img src={dataImage6} />
           </div>
@@ -122,7 +137,7 @@ function DataManagement() {
             </p>
           </div>
         </div>
-        <div className="flex p-[0.625rem] border border-solid items-start justify-center border-green">
+        <div className="flex p-[0.625rem] border border-solid items-start justify-center border-green reveal">
           <div className="w-[7rem]">
             <img src={dataImage5} />
           </div>
@@ -137,7 +152,7 @@ function DataManagement() {
             </p>
           </div>
         </div>
-        <div className="flex p-[0.625rem] border border-solid items-start justify-center border-green">
+        <div className="flex p-[0.625rem] border border-solid items-start justify-center border-green reveal">
           <div className="w-[7rem]">
             <img src={dataImage4} />
           </div>
@@ -151,7 +166,7 @@ function DataManagement() {
             </p>
           </div>
         </div>
-        <div className="flex p-[0.625rem]  border border-solid items-start justify-center border-green">
+        <div className="flex p-[0.625rem] border border-solid items-start justify-center border-green reveal">
           <div className="w-[7rem]">
             <img src={dataImage3} />
           </div>

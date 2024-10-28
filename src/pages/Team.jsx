@@ -1,15 +1,27 @@
+import { useEffect } from "react";
 import FooterTop from "../UI/FooterTop";
 import Navbar from "../UI/Navbar";
 import horizontalBlueLogo from "../assets/horizontal_blue_logo.png";
 import teamImage1 from "../assets/teamImage1.png";
 import BlueBox from "../components/BlueBox";
 import ImageContainer from "../components/ImageContainer";
+import { reveal } from "../utils/helper";
 
 function Team() {
+  useEffect(() => {
+    // Call the reveal function on mount
+    reveal();
+
+    // Attach scroll event listener
+    window.addEventListener("scroll", reveal);
+
+    // Cleanup event listener on unmount
+    return () => window.removeEventListener("scroll", reveal);
+  }, []);
   return (
     <div>
       <Navbar logo={horizontalBlueLogo} />
-      <div className="flex flex-col">
+      <div className="flex flex-col reveal">
         <div className="mt-[157px] mb-10">
           <h1 className="ml-16 font-extrabold text-4xl font-poppins text-black">
             <div className="mb-2">Our Team</div>
@@ -23,35 +35,35 @@ function Team() {
           />
         </div>
 
-        <div className="flex ml-20 my-20 items-end">
+        <div className="flex ml-20 my-20 items-end reveal">
           <BlueBox text1="MEET THE" text2="CO-FOUNDERS" />{" "}
         </div>
-        <div className="grid grid-cols-3 gap-10  ml-20">
+        <div className="grid grid-cols-3 gap-10  ml-20 reveal">
           <ImageContainer name="LOREM IPSUM" role="Role" />
           <ImageContainer name="LOREM IPSUM" role="Role" />
           <ImageContainer name="LOREM IPSUM" role="Role" />
         </div>
-        <div className="flex ml-20 my-20 items-end">
+        <div className="flex ml-20 my-20 items-end reveal">
           <BlueBox text1="BUSINESS" text2="CONSULTANT" />{" "}
         </div>
-        <div className="grid grid-cols-3 gap-10  ml-20">
+        <div className="grid grid-cols-3 gap-10  ml-20 reveal">
           <ImageContainer name="LOREM IPSUM" role="Role" />
           <ImageContainer name="LOREM IPSUM" role="Role" />
           <ImageContainer name="LOREM IPSUM" role="Role" />
         </div>
 
-        <div className="flex ml-20 my-20 items-end">
+        <div className="flex ml-20 my-20 items-end reveal">
           <BlueBox text1="BOARD OF" text2="ADVISORY" />
         </div>
 
-        <div className="grid grid-cols-3 gap-10 ml-20">
+        <div className="grid grid-cols-3 gap-10 ml-20 reveal">
           <ImageContainer name="LOREM IPSUM" role="Role" />
           <ImageContainer name="LOREM IPSUM" role="Role" />
         </div>
-        <div className="flex ml-20 my-20 items-end">
+        <div className="flex ml-20 my-20 items-end reveal">
           <BlueBox text1="MEET THE" text2="EMPLOYEES" />{" "}
         </div>
-        <div className="grid grid-cols-3  gap-10 ml-20">
+        <div className="grid grid-cols-3  gap-10 ml-20 reveal">
           <ImageContainer name="LOREM IPSUM" role="Role" />
           <ImageContainer name="LOREM IPSUM" role="Role" />
           <ImageContainer name="LOREM IPSUM" role="Role" />

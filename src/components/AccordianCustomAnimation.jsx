@@ -37,22 +37,24 @@ function AccordionCustomAnimation({ items }) {
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
   return (
-    <div className="w-[590px] mt-10 ml-10 px-10">
+    <div className="xl:w-[40rem] lg:w-[20rem] mt-10 ml-10 px-10">
       {items.map((item, index) => (
         <Accordion
-          className="border-b border-b-gray_line"
+          className="border-b border-solid border-b-gray_line"
           key={index}
           open={open === index + 1}
           animate={CUSTOM_ANIMATION}
           icon={<Icon id={index + 1} open={open} />}
         >
           <AccordionHeader onClick={() => handleOpen(index + 1)}>
-            <h1 className="font-poppins font-semibold text-gray_text text-xl">
+            <h1 className="font-poppins font-semibold text-gray_text xl:text-xl lg:text-base">
               {item.title}
             </h1>
           </AccordionHeader>
           <AccordionBody>
-            <p className="text-xl font-avenir">{item.content}</p>
+            <p className="xl:text-xl font-avenir lg:text-base">
+              {item.content}
+            </p>
           </AccordionBody>
         </Accordion>
       ))}

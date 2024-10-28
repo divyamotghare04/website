@@ -8,6 +8,8 @@ import zohoCusImage3 from "../../assets/zohoCusImage3.png";
 import zohoCusImage4 from "../../assets/zohoCusImage4.png";
 import zohoCusImage5 from "../../assets/zohoCusImage5.png";
 import zohoCusImage6 from "../../assets/zohoCusImage6.png";
+import { useEffect } from "react";
+import { reveal } from "../../utils/helper";
 
 const images = [
   {
@@ -43,10 +45,21 @@ const images = [
 ];
 
 function ZohoCustomization() {
+  useEffect(() => {
+    // Call the reveal function on mount
+    reveal();
+
+    // Attach scroll event listener
+    window.addEventListener("scroll", reveal);
+
+    // Cleanup event listener on unmount
+    return () => window.removeEventListener("scroll", reveal);
+  }, []);
+
   return (
     <div>
       <Navbar logo={horizontalLogo} />
-      <div className="flex justify-between mt-[157px] px-16 mb-12 ">
+      <div className="flex justify-between mt-[157px] px-16 mb-12 reveal">
         <h1 className="font-inter font-extrabold xl:text-4xl lg:text-2xl">
           Zoho Customisation
         </h1>
@@ -57,25 +70,10 @@ function ZohoCustomization() {
           exceeded, every step of the way.
         </p>
       </div>
-      <div className="mb-[10rem]">
+      <div className="mb-[10rem] reveal">
         <img src={zohoCusImage1} className="w-full" />
       </div>
 
-      {/* <div className="flex  items-center justify-between m-20">
-        <div className="">
-          <img src={zohoCusImage2} />
-        </div>
-        <div className="lg:w-[30rem] xl:w-[50rem]">
-          <h1 className="xl:text-4xl lg:text-2xl font-poppins font-bold mb-4">
-            Understanding Your Business
-          </h1>
-          <p className="font-avenir xl:text-xl xl:w-[35rem]">
-            We begin by diving deep into your business operations, workflows,
-            and pain points. By understanding your challenges, we can identify
-            opportunities for improvement and growth
-          </p>
-        </div>
-      </div> */}
       <div className="">
         <ImageScrollContent steps={images} />
       </div>

@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useCountUp } from "../Hooks/useCountUp";
 import { useOnScreen } from "../Hooks/useOnScreen";
 
@@ -33,6 +33,7 @@ import brandLogo14 from "../assets/brandLogo14.png";
 import brandLogo15 from "../assets/brandLogo15.png";
 import brandLogo16 from "../assets/brandLogo16.png";
 import brandLogo17 from "../assets/brandLogo17.svg";
+import { reveal } from "../utils/helper";
 
 const StatItem = ({ value, label, shouldAnimate }) => {
   const count = useCountUp(value, 1000, shouldAnimate);
@@ -48,6 +49,17 @@ const StatItem = ({ value, label, shouldAnimate }) => {
 function About() {
   const ref = useRef();
   const shouldAnimate = useOnScreen(ref);
+
+  useEffect(() => {
+    // Call the reveal function on mount
+    reveal();
+
+    // Attach scroll event listener
+    window.addEventListener("scroll", reveal);
+
+    // Cleanup event listener on unmount
+    return () => window.removeEventListener("scroll", reveal);
+  }, []);
 
   const brandLogos = [
     brandLogo1,
@@ -72,22 +84,23 @@ function About() {
   return (
     <div>
       <Navbar logo={blueLogo} />
-      <div className="flex flex-col">
-        <div className="mt-[10rem] mb-10">
+      <div className="flex flex-col ">
+        <div className="mt-[10rem] mb-10 reveal">
           <h1 className="ml-16 font-extrabold xl:text-4xl lg:text-2xl font-inter text-black">
             <div className="mb-2"> Born from Dreams, Powered by</div>
             <div>Innovation: Introducing Data Weaver!</div>
           </h1>
         </div>
-        <div className=" ">
+        <div className="reveal ">
           <img
             alt="team business people"
             src={aboutImage1}
             className="w-full h-auto"
+            loading="lazy"
           />
         </div>
 
-        <div className="overflow-hidden  border-b-4 shadow-lg  border-solid  border-white">
+        <div className="overflow-hidden  border-b-4 shadow-lg  border-solid  border-white ">
           <div className="flex marquee animate-marquee">
             {brandLogos.map((logo, index) => (
               <div
@@ -142,7 +155,7 @@ function About() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center mt-10 mx-10 mb-20">
+      <div className="flex justify-center items-center mt-10 mx-10 mb-20 ">
         <div
           ref={ref}
           className="flex w-[600px] justify-between text-center items-center p-10 bg-white "
@@ -152,7 +165,7 @@ function About() {
           <StatItem value={10} label="Teams" shouldAnimate={shouldAnimate} />
         </div>
       </div>
-      <div className="flex items-center ml-16 mb-[11rem]">
+      <div className="flex items-center ml-16 mb-[11rem] reveal">
         <div className="xl:w-[32.5rem] mr-10 lg:w-[25rem] lg:h-[25rem] xl:h-[32rem] flex flex-col justify-between">
           <div className="flex justify-between">
             <BlueBox text2="OUR MISSION" className=" w-full h-full" />
@@ -173,7 +186,7 @@ function About() {
           </p>
         </div>
       </div>
-      <div className="flex items-center justify-end mb-[10rem]  xl:mx-16 lg:mr-10">
+      <div className="flex items-center justify-end mb-[10rem]  xl:mx-16 lg:mr-10 reveal">
         <div className="mt-10 xl:ml-20 lg:mr-20 xl:w-[30rem] lg:w-[25rem]">
           <h1 className=" xl:text-3xl lg:text-2xl font-bold font-poppins text-gray_text">
             Tailored technology services to strengthen business operations.
@@ -193,10 +206,10 @@ function About() {
           <img src={aboutImage3} />
         </div>
       </div>
-      <div className="flex mb-16 ml-16">
+      <div className="flex mb-16 ml-16 reveal">
         <BlueBox text2="OUR PROCESS" className="w-full h-full" />
       </div>
-      <div className="flex justify-between items-start w-[full] h-[9rem] xl:mx-[11rem] lg:mx-[8rem] xl:mb-[30rem] lg:mb-[20rem]">
+      <div className="flex justify-between items-start w-[full] h-[9rem] xl:mx-[11rem] lg:mx-[8rem] xl:mb-[30rem] lg:mb-[20rem] reveal">
         <div className="">
           <img src={aboutImage4} />
           <div className="py-2 mx-2 w-[10rem] mt-3">
