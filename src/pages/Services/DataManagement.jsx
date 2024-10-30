@@ -3,7 +3,7 @@ import { reveal } from "../../utils/helper";
 import Navbar from "../../UI/Navbar";
 import logoBlue from "../../assets/horizontal_blue_logo.png";
 import dataImage1 from "../../assets/dataImage1.png";
-import dataImage2 from "../../assets/dataImage2.svg";
+import dataImage2 from "../../assets/dataImage2.png";
 import dataImage3 from "../../assets/dataImage3.png";
 import dataImage4 from "../../assets/dataImage4.png";
 import dataImage5 from "../../assets/dataImage5.png";

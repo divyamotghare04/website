@@ -167,14 +167,14 @@ function About() {
       </div>
       <div className="flex items-center ml-16 mb-[11rem] reveal">
         <div className="xl:w-[32.5rem] mr-10 lg:w-[25rem] lg:h-[25rem] xl:h-[32rem] flex flex-col justify-between">
-          <div className="flex justify-between">
+          <div className="flex justify-between reveal">
             <BlueBox text2="OUR MISSION" className=" w-full h-full" />
             <img src={aboutImage2} className="xl:w-[15rem] lg:w-[11rem]" />
           </div>
-          <img src={aboutImage3} />
+          <img src={aboutImage3} className="reveal" />
         </div>
 
-        <div className="mt-10 ml-20 xl:w-[30rem] lg:w-[25rem]">
+        <div className="mt-10 ml-20 xl:w-[30rem] lg:w-[25rem] reveal">
           <h1 className=" xl:text-3xl lg:text-2xl font-bold font-poppins text-gray_text">
             Data Weaver, driven by passion and enthusiasm.
           </h1>
@@ -199,11 +199,11 @@ function About() {
           </p>
         </div>
         <div className="xl:w-[32.5rem] mr-10 lg:w-[25rem] lg:h-[25rem] xl:h-[32rem] flex flex-col justify-between">
-          <div className="flex justify-between">
+          <div className="flex justify-between reveal">
             <BlueBox text2="OUR VISION" className="  w-full h-full" />
             <img src={aboutImage2} className="xl:w-[15rem] lg:w-[11rem]" />
           </div>
-          <img src={aboutImage3} />
+          <img src={aboutImage3} className="reveal" />
         </div>
       </div>
       <div className="flex mb-16 ml-16 reveal">
