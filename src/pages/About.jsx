@@ -16,24 +16,7 @@ import aboutImage6 from "../assets/aboutImage6.svg";
 import aboutImage7 from "../assets/aboutImage7.svg";
 import aboutImage8 from "../assets/aboutImage8.svg";
 
-import brandLogo1 from "../assets/brandLogo1.png";
-import brandLogo2 from "../assets/brandLogo2.png";
-import brandLogo3 from "../assets/brandLogo3.png";
-import brandLogo4 from "../assets/brandLogo4.png";
-import brandLogo5 from "../assets/brandLogo5.png";
-import brandLogo6 from "../assets/brandLogo6.png";
-import brandLogo7 from "../assets/brandLogo7.png";
-import brandLogo8 from "../assets/brandLogo8.png";
-import brandLogo9 from "../assets/brandLogo9.png";
-import brandLogo10 from "../assets/brandLogo10.png";
-import brandLogo11 from "../assets/brandLogo11.png";
-import brandLogo12 from "../assets/brandLogo12.png";
-import brandLogo13 from "../assets/brandLogo13.png";
-import brandLogo14 from "../assets/brandLogo14.png";
-import brandLogo15 from "../assets/brandLogo15.png";
-import brandLogo16 from "../assets/brandLogo16.png";
-import brandLogo17 from "../assets/brandLogo17.svg";
-import { reveal } from "../utils/helper";
+import { reveal, brandLogos } from "../utils/helper";
 
 const StatItem = ({ value, label, shouldAnimate }) => {
   const count = useCountUp(value, 1000, shouldAnimate);
@@ -51,35 +34,12 @@ function About() {
   const shouldAnimate = useOnScreen(ref);
 
   useEffect(() => {
-    // Call the reveal function on mount
     reveal();
 
-    // Attach scroll event listener
     window.addEventListener("scroll", reveal);
 
-    // Cleanup event listener on unmount
     return () => window.removeEventListener("scroll", reveal);
   }, []);
-
-  const brandLogos = [
-    brandLogo1,
-    brandLogo2,
-    brandLogo3,
-    brandLogo4,
-    brandLogo5,
-    brandLogo6,
-    brandLogo7,
-    brandLogo8,
-    brandLogo9,
-    brandLogo10,
-    brandLogo11,
-    brandLogo12,
-    brandLogo13,
-    brandLogo14,
-    brandLogo15,
-    brandLogo16,
-    brandLogo17,
-  ];
 
   return (
     <div>
@@ -115,42 +75,6 @@ function About() {
                 />
               </div>
             ))}
-            {brandLogos.map((logo, index) => (
-              <div
-                key={index}
-                className="marqueeTwo flex-shrink-0 w-32 h-32 mx-4"
-              >
-                <img
-                  src={logo}
-                  alt={`Brand logo ${index + 1}`}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            ))}{" "}
-            {brandLogos.map((logo, index) => (
-              <div
-                key={index}
-                className="marqueeThree flex-shrink-0 w-32 h-32 mx-4"
-              >
-                <img
-                  src={logo}
-                  alt={`Brand logo ${index + 1}`}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            ))}{" "}
-            {brandLogos.map((logo, index) => (
-              <div
-                key={index}
-                className="marqueeFour flex-shrink-0 w-32 h-32 mx-4"
-              >
-                <img
-                  src={logo}
-                  alt={`Brand logo ${index + 1}`}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            ))}
           </div>
         </div>
       </div>
@@ -158,13 +82,14 @@ function About() {
       <div className="flex justify-center items-center mt-10 mx-10 mb-20 ">
         <div
           ref={ref}
-          className="flex w-[600px] justify-between text-center items-center p-10 bg-white "
+          className="flex w-[35rem] justify-between text-center items-center p-10 bg-white "
         >
           <StatItem value={25} label="Projects" shouldAnimate={shouldAnimate} />
           <StatItem value={15} label="Clients" shouldAnimate={shouldAnimate} />
           <StatItem value={10} label="Teams" shouldAnimate={shouldAnimate} />
         </div>
       </div>
+
       <div className="flex items-center ml-16 mb-[11rem] reveal">
         <div className="xl:w-[32.5rem] mr-10 lg:w-[25rem] lg:h-[25rem] xl:h-[32rem] flex flex-col justify-between">
           <div className="flex justify-between reveal">

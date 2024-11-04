@@ -1,3 +1,21 @@
+import brandLogo1 from "../assets/brandLogo1.png";
+import brandLogo2 from "../assets/brandLogo2.png";
+import brandLogo3 from "../assets/brandLogo3.png";
+import brandLogo4 from "../assets/brandLogo4.png";
+import brandLogo5 from "../assets/brandLogo5.png";
+import brandLogo6 from "../assets/brandLogo6.png";
+import brandLogo7 from "../assets/brandLogo7.png";
+import brandLogo8 from "../assets/brandLogo8.png";
+import brandLogo9 from "../assets/brandLogo9.png";
+import brandLogo10 from "../assets/brandLogo10.png";
+import brandLogo11 from "../assets/brandLogo11.png";
+import brandLogo12 from "../assets/brandLogo12.png";
+import brandLogo13 from "../assets/brandLogo13.png";
+import brandLogo14 from "../assets/brandLogo14.png";
+import brandLogo15 from "../assets/brandLogo15.png";
+import brandLogo16 from "../assets/brandLogo16.png";
+import brandLogo17 from "../assets/brandLogo17.svg";
+
 export const salesAccordianArray = [
   {
     title: "CRM",
@@ -145,12 +163,12 @@ export const reveal = () => {
   for (let i = 0; i < reveals.length; i++) {
     const windowHeight = window.innerHeight;
     const elementTop = reveals[i].getBoundingClientRect().top;
-    const elementVisible = 100; 
+    const elementVisible = 100;
 
     if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active"); 
+      reveals[i].classList.add("active");
     } else {
-      reveals[i].classList.remove("active"); 
+      reveals[i].classList.remove("active");
     }
   }
 };
@@ -162,7 +180,7 @@ window.addEventListener("load", () => {
   document.querySelector("body").classList.add("loaded");
 });
 
-function animateValue(obj, start, end, duration) {
+export function animateValue(obj, start, end, duration) {
   let startTimestamp = null;
   const step = (timestamp) => {
     if (!startTimestamp) startTimestamp = timestamp;
@@ -175,7 +193,7 @@ function animateValue(obj, start, end, duration) {
   window.requestAnimationFrame(step);
 }
 
-function startCounter() {
+export function startCounter() {
   const project = document.getElementById("projects");
   animateValue(project, 1, 25, 1300);
 
@@ -208,3 +226,23 @@ var cards = document.querySelectorAll(".card");
 });
 
 // observer.observe(document.querySelector("#projects"));
+
+export const brandLogos = [
+  brandLogo1,
+  brandLogo2,
+  brandLogo3,
+  brandLogo4,
+  brandLogo5,
+  brandLogo6,
+  brandLogo7,
+  brandLogo8,
+  brandLogo9,
+  brandLogo10,
+  brandLogo11,
+  brandLogo12,
+  brandLogo13,
+  brandLogo14,
+  brandLogo15,
+  brandLogo16,
+  brandLogo17,
+];

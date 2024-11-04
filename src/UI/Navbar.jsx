@@ -63,7 +63,7 @@ function Navbar({ logo, color }) {
               <img
                 alt=""
                 src={logo}
-                className="xl:h-[40px] lg:h-[36px] w-auto"
+                className="xl:h-[40px] lg:h-[36px] w-auto hover:h-[42px]"
               />
             </a>
           </div>

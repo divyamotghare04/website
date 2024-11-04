@@ -12,7 +12,7 @@ function ImageContainer({ img, name, role }) {
         {/* The overlay (image) element */}
         <div className="absolute top-0 left-0 xl:w-[20rem] xl:h-[20rem] lg:w-[12.5rem]  -translate-x-10 -translate-y-20">
           {" "}
-          <img src={teamImage3} />
+          <img src={img} />
         </div>
       </div>
       <div>

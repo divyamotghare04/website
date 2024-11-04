@@ -82,16 +82,18 @@
 
 @keyframes marquee {
   0% {
-    left: 100%;
-  }
-  50% {
-    left: -100%;
+    transform: translateX(0);
   }
   100% {
-    left: -100%;
+    transform: translateX(-100%);
   }
 }
 
+.marquee {
+  display: flex;
+  /* overflow: hidden; */
+  white-space: nowrap;
+}
 .marqueeOne {
   animation: marquee 10s linear infinite;
 }
