@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
-import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
+import { RiDoubleQuotesL } from "react-icons/ri";
 
 import testimonyImage1 from "../assets/testimonials/reed.png";
 import testimonyImage2 from "../assets/testimonials/rishabh.png";
@@ -102,28 +102,38 @@ const testimonials = [
 
 const TestimonialSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isLg, setIsLg] = useState(
+    window.innerWidth >= 976 && window.innerWidth < 1440
+  );
+
+  // Update the screen size state on resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLg(window.innerWidth >= 976 && window.innerWidth < 1440);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handlePrevClick = () => {
     if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 2);
+      setCurrentIndex(currentIndex - 1);
     }
   };
 
   const handleNextClick = () => {
-    if (currentIndex < testimonials.length - 2) {
-      setCurrentIndex(currentIndex + 2);
-    } else if (currentIndex === testimonials.length - 2) {
+    if (currentIndex < testimonials.length - 1) {
       setCurrentIndex(currentIndex + 1);
     }
   };
 
-  const isLastItem = currentIndex === testimonials.length - 1;
+  const isLastItem = currentIndex >= testimonials.length - 1;
 
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col">
       <div className="flex">
         <div className="bg-white xl:ml-10 lg:ml-5 flex flex-col">
-          <div className="xl:w-[34rem] lg:w-[22rem] xl:h-[29rem] lg:h-[46rem] bg-blue_team bg-opacity-10 p-6 shadow-lg">
+          <div className="xl:w-[34rem] lg:w-[42rem] xl:h-[30rem] lg:h-[26rem] bg-blue_team bg-opacity-10 p-6 shadow-lg">
             <p className="text-gray_text text-lg font-inter mb-4">
               <RiDoubleQuotesL size={30} color="green" />
               {testimonials[currentIndex].testimony}
@@ -157,9 +167,9 @@ const TestimonialSlider = () => {
           </div>
         </div>
 
-        {!isLastItem && (
-          <div className="bg-white xl:ml-10 lg:ml-5 flex flex-col ">
-            <div className="xl:w-[34rem] lg:w-[22rem] xl:h-[29rem] lg:h-[46rem] bg-blue_team bg-opacity-10 p-6 shadow-lg">
+        {!isLg && currentIndex + 1 < testimonials.length && (
+          <div className="bg-white xl:ml-10 lg:ml-5 flex flex-col">
+            <div className="xl:w-[34rem] lg:w-[22rem] xl:h-[30rem] lg:h-[46rem] bg-blue_team bg-opacity-10 p-6 shadow-lg">
               <p className="text-gray_text text-lg font-inter mb-4">
                 <RiDoubleQuotesL size={30} color="green" />
                 {testimonials[currentIndex + 1].testimony}
@@ -207,7 +217,7 @@ const TestimonialSlider = () => {
         </button>
         <button
           onClick={handleNextClick}
-          disabled={currentIndex >= testimonials.length - 1}
+          disabled={isLastItem}
           className="p-2 bg-white border border-green text-green hover:bg-green hover:text-white disabled:bg-gray_line disabled:text-green disabled:border-green disabled:hover:bg-gray_line transition"
         >
           <GoArrowRight size={24} />
