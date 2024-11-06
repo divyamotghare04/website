@@ -5,7 +5,7 @@ import ArrowButton from "./ArrowButton";
 function FooterTop({ content }) {
   return (
     <div className=" relative">
-      <img src={footerImage} className=" object-fill w-[96rem] h-full" />
+      <img src={footerImage} className=" object-fill w-full h-full" />
       <div className=" absolute inset-0 flex flex-col items-center justify-center text-white text-center">
         <h2 className="xl:text-5xl lg:text-3xl font-semibold font-poppins mb-4 shadow-text">
           Let's Get Started?

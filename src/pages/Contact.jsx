@@ -93,7 +93,7 @@ function Contact() {
             <div className="ml-7">
               <img src={contactImage2} />
             </div>
-            <p>Mumbai, IN</p>
+            <p>Wrocław, Poland</p>
           </div>
         </div>
       </div>

@@ -106,7 +106,6 @@ const TestimonialSlider = () => {
     window.innerWidth >= 976 && window.innerWidth < 1440
   );
 
-  // Update the screen size state on resize
   useEffect(() => {
     const handleResize = () => {
       setIsLg(window.innerWidth >= 976 && window.innerWidth < 1440);
@@ -115,19 +114,28 @@ const TestimonialSlider = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Auto-slide effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000); 
+
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
   const handlePrevClick = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
+    setCurrentIndex((prevIndex) =>
+      prevIndex > 0 ? prevIndex - 1 : testimonials.length - 1
+    );
   };
 
   const handleNextClick = () => {
-    if (currentIndex < testimonials.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    }
+    setCurrentIndex((prevIndex) =>
+      prevIndex < testimonials.length - 1 ? prevIndex + 1 : 0
+    );
   };
-
-  const isLastItem = currentIndex >= testimonials.length - 1;
 
   return (
     <div className="flex flex-col">
@@ -217,7 +225,7 @@ const TestimonialSlider = () => {
         </button>
         <button
           onClick={handleNextClick}
-          disabled={isLastItem}
+          disabled={currentIndex === testimonials.length - 1}
           className="p-2 bg-white border border-green text-green hover:bg-green hover:text-white disabled:bg-gray_line disabled:text-green disabled:border-green disabled:hover:bg-gray_line transition"
         >
           <GoArrowRight size={24} />
