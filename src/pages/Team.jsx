@@ -33,11 +33,11 @@ const employees = Array(11).fill({
 });
 
 const TeamSection = ({ title1, title2, members }) => (
-  <div className="my-20">
-    <div className="flex ml-20 items-end reveal">
+  <div className="my-[5rem] flex flex-col xxl:mx-[20rem]">
+    <div className="flex ml-20  items-end reveal">
       <BlueBox text1={title1} text2={title2} />
     </div>
-    <div className="grid grid-cols-3 gap-10 ml-20 reveal">
+    <div className="grid grid-cols-3 gap-10 ml-20 reveal items-center">
       {members.map((member, index) => (
         <ImageContainer key={index} name={member.name} role={member.role} />
       ))}
@@ -60,9 +60,9 @@ function Team() {
   return (
     <div>
       <Navbar logo={horizontalBlueLogo} />
-      <div className="flex flex-col reveal">
-        <div className="mt-[157px] mb-10">
-          <h1 className="ml-16 font-extrabold text-4xl font-poppins text-black">
+      <div className="flex flex-col reveal  ">
+        <div className="mt-[157px] mb-10 xxl:ml-[20rem]">
+          <h1 className="ml-16 font-extrabold text-4xl xxl:text-5xl font-poppins text-black">
             <div className="mb-2">Our Team</div>
           </h1>
         </div>

@@ -24,119 +24,120 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="">
-      <img alt="" src={rec} className="top-img " />
-      <Navbar logo={horizontalLogo} img={rec} color="black" />
+    <div>
+      <div className="flex flex-col items-center">
+        <img alt="" src={rec} className="top-img " />
+        <Navbar logo={horizontalLogo} img={rec} color="black" />
 
-      <div className="flex reveal">
-        {" "}
-        {/* Add reveal class */}
-        <div className="mt-[18rem] ml-16">
-          <h1 className="xl:text-7xl xl:w-[50rem] lg:w-[33rem] lg:text-5xl font-extrabold font-poppins text-blue_text">
-            <div className="mb-3"> Simplify the process,</div>
-            <div> Optimize the growth</div>
-          </h1>
-          <br />
-          <h1 className="lg:w-[32rem] xl:w-[38rem] mt-2 xl:text-3xl lg:text-2xl font-medium font-playfair_display text-gray_text">
-            Ready to Transform Your Business Digitally?
-          </h1>
-          <p className="xl:text-xl lg:text-base mt-8 text-gray_text font-avenir text-balance">
-            Whether you’re a burgeoning startup or an established enterprise,
+        <div className="flex reveal">
+          {" "}
+          {/* Add reveal class */}
+          <div className="mt-[18rem] ml-16 xxl:mr-[15rem]">
+            <h1 className="xl:text-7xl xl:w-[50rem] lg:w-[33rem] lg:text-5xl font-extrabold font-poppins text-blue_text">
+              <div className="mb-3"> Simplify the process,</div>
+              <div> Optimize the growth</div>
+            </h1>
             <br />
-            Data Weaver has the blueprint for your success! <br />
-            As seasoned IT consultants and Data Analysts, we specialize in
-            crafting <br />
-            tailor-made software solutions that empower your business to scale{" "}
-            <br /> seamlessly and streamline operations efficiently. <br />
-            Seize the data and unlock its full potential with Data Weaver.
-            <br />
-            Experience the power of digital transformation today!
-          </p>
-          <div className="mt-16">
-            <Link to="/contact">
-              <ArrowButton
-                content="Let's connect"
-                color="green"
-                textColor="white"
-              />
-            </Link>
-          </div>
-        </div>
-        <div className="w-[50rem]">
-          <img
-            alt=""
-            src={homeImage1}
-            className="xl:w-[42rem] xl:h-[56rem] lg:w-[44rem] lg:h-[36rem] reveal" // Add reveal class
-          />
-        </div>
-      </div>
-
-      <div className="flex items-center mt-[12rem] ml-16 mb-[12rem] reveal">
-        {" "}
-        {/* Add reveal class */}
-        <div className="xl:w-[32.5rem] xl:h-[32rem] lg:w-[25rem] lg:h-[24.5rem] flex flex-col justify-between">
-          <div className="flex justify-between">
-            <BlueBox
-              text1="WHO"
-              text2="ARE WE"
-              className="xl:w-full xl:h-full"
-            />
-            <div className="lg:w-[11.5rem] xl:w-[15rem]">
-              <img src={homeImage2} className="reveal" />{" "}
-              {/* Add reveal class */}
+            <h1 className="lg:w-[32rem] xl:w-[38rem] mt-2 xl:text-3xl lg:text-2xl font-medium font-playfair_display text-gray_text">
+              Ready to Transform Your Business Digitally?
+            </h1>
+            <p className="xl:text-xl lg:text-base mt-8 text-gray_text font-avenir text-balance">
+              Whether you’re a burgeoning startup or an established enterprise,
+              <br />
+              Data Weaver has the blueprint for your success! <br />
+              As seasoned IT consultants and Data Analysts, we specialize in
+              crafting <br />
+              tailor-made software solutions that empower your business to scale{" "}
+              <br /> seamlessly and streamline operations efficiently. <br />
+              Seize the data and unlock its full potential with Data Weaver.
+              <br />
+              Experience the power of digital transformation today!
+            </p>
+            <div className="mt-16">
+              <Link to="/contact">
+                <ArrowButton
+                  content="Let's connect"
+                  color="green"
+                  textColor="white"
+                />
+              </Link>
             </div>
           </div>
-          <img src={homeImage3} className="reveal" /> {/* Add reveal class */}
+          <div className="w-[30vw] border flex justify-end">
+            <img
+              alt=""
+              src={homeImage1}
+              className="xl:w-[42rem] xxl:h-[56rem]  lg:h-[40rem] reveal" // Add reveal class
+            />
+          </div>
         </div>
-        <div className="ml-20">
-          <h1 className="xl:text-3xl lg:text-xl font-bold font-poppins text-gray_text">
-            Born from Dreams, Powered <br /> by Innovation: Introducing <br />{" "}
-            Data Weaver!
-          </h1>
-          <p className="xl:text-lg xl:w-[30rem] lg:w-[22rem] font-normal mt-8 font-avenir text-balance text-gray_text">
-            Our story is one of relentless passion and unwavering commitment. We
-            offer an extensive array of technology services and IT solutions
-            meticulously designed to fortify and enhance our clients’ business
-            operations.
-          </p>
-          <div className="mt-16">
-            <Link to="/about">
-              <ArrowButton
-                content="Know more"
-                color="green"
-                textColor="white"
+
+        <div className="flex items-center mt-[12rem] ml-16 mb-[12rem] reveal">
+          {" "}
+          {/* Add reveal class */}
+          <div className="xl:w-[32.5rem] xl:h-[32rem] lg:w-[25rem] lg:h-[24.5rem] flex flex-col justify-between">
+            <div className="flex justify-between">
+              <BlueBox
+                text1="WHO"
+                text2="ARE WE"
+                className="xl:w-full xl:h-full"
               />
-            </Link>
+              <div className="lg:w-[11.5rem] xl:w-[15rem]">
+                <img src={homeImage2} className="reveal" />{" "}
+                {/* Add reveal class */}
+              </div>
+            </div>
+            <img src={homeImage3} className="reveal" /> {/* Add reveal class */}
+          </div>
+          <div className="ml-20">
+            <h1 className="xl:text-3xl lg:text-xl font-bold font-poppins text-gray_text">
+              Born from Dreams, Powered <br /> by Innovation: Introducing <br />{" "}
+              Data Weaver!
+            </h1>
+            <p className="xl:text-lg xl:w-[30rem] lg:w-[22rem] font-normal mt-8 font-avenir text-balance text-gray_text">
+              Our story is one of relentless passion and unwavering commitment.
+              We offer an extensive array of technology services and IT
+              solutions meticulously designed to fortify and enhance our
+              clients’ business operations.
+            </p>
+            <div className="mt-16">
+              <Link to="/about">
+                <ArrowButton
+                  content="Know more"
+                  color="green"
+                  textColor="white"
+                />
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative reveal">
+          {" "}
+          {/* Add reveal class */}
+          <div className="flex ml-16 mb-[12rem]">
+            <BlueBox
+              text1="WHAT"
+              text2="WE OFFER"
+              className="xl:w-full xl:h-[40rem]"
+            />
+            <ExpandingPanels />
+          </div>
+        </div>
+
+        <div className="flex ml-16 mb-[12rem] reveal">
+          {" "}
+          {/* Add reveal class */}
+          <BlueBox
+            text1="WHAT OUR"
+            text2="CLIENTS SAY"
+            className="w-full h-full"
+          />
+          <div>
+            <TestimonialSlider />
           </div>
         </div>
       </div>
-
-      <div className="relative reveal">
-        {" "}
-        {/* Add reveal class */}
-        <div className="flex ml-16 mb-[12rem]">
-          <BlueBox
-            text1="WHAT"
-            text2="WE OFFER"
-            className="xl:w-full xl:h-[40rem]"
-          />
-          <ExpandingPanels />
-        </div>
-      </div>
-
-      <div className="flex ml-16 mb-[12rem] reveal">
-        {" "}
-        {/* Add reveal class */}
-        <BlueBox
-          text1="WHAT OUR"
-          text2="CLIENTS SAY"
-          className="w-full h-full"
-        />
-        <div>
-          <TestimonialSlider />
-        </div>
-      </div>
-
       <FooterTop content="Join us in shaping the future of technology together! Experience the Data Weaver difference today." />
     </div>
   );

@@ -7,6 +7,7 @@ export default {
       md: "768px",
       lg: "976px",
       xl: "1440px",
+      xxl: "2560px",
     },
     colors: {
       primary: "#1d1651",
@@ -22,7 +23,7 @@ export default {
       blue_data: "#1E0F7654",
       gray_line: "#D9D9D9",
       blue_gray: "#FFCFD8DC",
-      gray_line: "#c0c6cc", 
+      gray_line: "#c0c6cc",
     },
     extend: {
       fontFamily: {

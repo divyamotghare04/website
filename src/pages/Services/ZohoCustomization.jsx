@@ -59,11 +59,11 @@ function ZohoCustomization() {
   return (
     <div>
       <Navbar logo={horizontalLogo} />
-      <div className="flex justify-between mt-[157px] px-16 mb-12 reveal">
-        <h1 className="font-inter font-extrabold xl:text-4xl lg:text-2xl">
+      <div className="flex justify-between mt-[157px] px-16 mb-12 reveal  xxl:ml-[20rem] xxl:mt-[15rem] xxl:mr-[15rem]">
+        <h1 className=" xxl:mr-[20rem] font-inter font-extrabold xxl:text-5xl xl:text-4xl lg:text-2xl">
           Zoho Customisation
         </h1>
-        <p className="font-avenir xl:text-xl lg:text-base text-gray_text">
+        <p className="font-avenir xxl:text-2xl xl:text-xl lg:text-base text-gray_text">
           Unlock the full potential of your business processes with Data
           Weaver's expert <br /> Zoho customization services. Our proven
           approach ensures that your unique <br /> needs are not just met, but

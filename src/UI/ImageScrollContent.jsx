@@ -45,7 +45,7 @@ const ImageScrollContent = ({ steps }) => {
           <div
             key={index}
             ref={(el) => (imageRefs.current[index] = el)}
-            className="h-[30rem] flex items-center justify-center p-8"
+            className="h-[30rem] xxl:h-[50rem] flex items-center justify-center p-8"
           >
             <img
               src={step.src}
@@ -55,7 +55,7 @@ const ImageScrollContent = ({ steps }) => {
           </div>
         ))}
       </div>
-      <div className="sticky h-[30rem] top-0 left-1/2 w-1/2">
+      <div className="sticky h-[30rem] xxl:h-[50rem] top-0 left-1/2 w-1/2">
         {steps.map((step, index) => (
           <div
             key={index}
@@ -63,8 +63,10 @@ const ImageScrollContent = ({ steps }) => {
               activeIndex === index ? "opacity-100" : "opacity-0"
             }`}
           >
-            <h2 className="text-3xl font-bold mb-4">{step.title}</h2>
-            <p className="text-lg">{step.content}</p>
+            <h2 className="text-3xl xxl:text-5xl font-bold mb-4">
+              {step.title}
+            </h2>
+            <p className="text-lg xxl:text-2xl">{step.content}</p>
           </div>
         ))}
       </div>

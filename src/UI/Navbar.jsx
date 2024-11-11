@@ -55,15 +55,15 @@ function Navbar({ logo, color }) {
       <header className="absolute inset-x-0 top-0 z-50">
         <nav
           aria-label="Global"
-          className="flex items-center justify-between py-6"
+          className="flex items-center xxl:mx-[20rem] justify-between py-6"
         >
-          <div className="flex lg:flex-1 ml-16 relative">
+          <div className="flex lg:flex-1 ml-16  relative">
             <a href="/" className="p-1.5">
               <span className="sr-only">Your Company</span>
               <img
                 alt=""
                 src={logo}
-                className="xl:h-[40px] lg:h-[36px] w-auto hover:h-[42px]"
+                className="xl:h-[40px] xxl:h-[55px] lg:h-[36px] w-auto hover:h-[42px]"
               />
             </a>
           </div>
@@ -80,10 +80,10 @@ function Navbar({ logo, color }) {
               <Bars3Icon aria-hidden="true" className="h-6 w-6" />
             </button>
           </div>
-          <div className="mx-10 hidden lg:flex lg:gap-x-12 xl:gap-x-16">
+          <div className="mx-10 hidden lg:flex xxl:gap-x-20 lg:gap-x-12 xl:gap-x-16">
             <Menu as="div" className="relative inline-block text-left">
               <MenuButton
-                className={`inline-flex w-full justify-center xl:text-xl lg:text-lg font-medium font-poppins leading-6 hover:font-bold ${
+                className={`inline-flex w-full justify-center xxl:text-2xl xl:text-xl lg:text-lg font-medium font-poppins leading-6 hover:font-bold ${
                   isServicesRoute
                     ? "underline decoration-green decoration-2"
                     : ""
@@ -97,7 +97,7 @@ function Navbar({ logo, color }) {
 
               <MenuItems
                 transition
-                className="absolute left-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none"
+                className="absolute left-0 z-10 mt-2 w-56 xxl:w-[15rem] origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none"
               >
                 <div className="py-4 px-2">
                   <MenuItem>
@@ -106,7 +106,7 @@ function Navbar({ logo, color }) {
                         color: "black",
                       }}
                       href="/services/data-management"
-                      className="block px-4 py-2 font-avenir text-lg"
+                      className="block px-4 py-2 font-avenir xxl:text-xl text-lg"
                     >
                       Data Management
                     </a>
@@ -117,7 +117,7 @@ function Navbar({ logo, color }) {
                         color: "black",
                       }}
                       href="/services/erp-consultation"
-                      className="block px-4 py-2 font-avenir text-lg"
+                      className="block px-4 py-2 xxl:text-xl font-avenir text-lg"
                     >
                       ERP Consultation
                     </a>
@@ -128,7 +128,7 @@ function Navbar({ logo, color }) {
                         color: "black",
                       }}
                       href="/services/zoho-customization"
-                      className="block px-4 py-2 font-avenir text-lg"
+                      className="block px-4 py-2 xxl:text-xl font-avenir text-lg"
                     >
                       Zoho Customization
                     </a>
@@ -139,7 +139,7 @@ function Navbar({ logo, color }) {
 
             <Menu as="div" className="relative inline-block text-left">
               <MenuButton
-                className={` hover:font-bold inline-flex w-full justify-center xl:text-xl lg:text-lg font-medium font-poppins leading-6 ${
+                className={` hover:font-bold xxl:text-2xl inline-flex w-full justify-center xl:text-xl lg:text-lg font-medium font-poppins leading-6 ${
                   isProductsRoute
                     ? "underline decoration-green decoration-2"
                     : ""
@@ -153,7 +153,7 @@ function Navbar({ logo, color }) {
 
               <MenuItems
                 transition
-                className="absolute left-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none"
+                className="absolute left-0 z-10 mt-2 w-56 xxl:w-[10rem] origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none"
               >
                 <div className="py-4 px-2">
                   <MenuItem>
@@ -162,7 +162,7 @@ function Navbar({ logo, color }) {
                         color: "black",
                       }}
                       href="/products/zoho-one"
-                      className="block px-4 py-2 font-avenir text-lg"
+                      className="block px-4 py-2 font-avenir xxl:text-xl text-lg"
                     >
                       Zoho One
                     </a>
@@ -173,7 +173,7 @@ function Navbar({ logo, color }) {
                         color: "black",
                       }}
                       href="/products/erp-next"
-                      className="block px-4 py-2 font-avenir text-lg"
+                      className="block px-4 py-2 xxl:text-xl font-avenir text-lg"
                     >
                       ERP Next
                     </a>
@@ -189,7 +189,7 @@ function Navbar({ logo, color }) {
                 }}
                 key={item.name}
                 href={item.href}
-                className={`xl:text-xl hover:font-bold lg:text-lg font-medium font-poppins leading-6 ${
+                className={`xl:text-xl hover:font-bold xxl:text-2xl lg:text-lg font-medium font-poppins leading-6 ${
                   isActive(item.href)
                     ? "underline decoration-green decoration-2"
                     : ""

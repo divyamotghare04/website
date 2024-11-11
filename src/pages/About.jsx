@@ -45,8 +45,8 @@ function About() {
     <div>
       <Navbar logo={blueLogo} />
       <div className="flex flex-col ">
-        <div className="mt-[10rem] mb-10 reveal">
-          <h1 className="ml-16 font-extrabold xl:text-4xl lg:text-2xl font-inter text-black">
+        <div className="mt-[10rem] mb-10 reveal  xxl:mx-[20rem] xxl:mt-[15rem]">
+          <h1 className="ml-16 font-extrabold xxl:text-5xl xl:text-4xl lg:text-2xl font-inter text-black">
             <div className="mb-2"> Born from Dreams, Powered by</div>
             <div>Innovation: Introducing Data Weaver!</div>
           </h1>
@@ -90,7 +90,7 @@ function About() {
         </div>
       </div>
 
-      <div className="flex items-center ml-16 mb-[11rem] reveal">
+      <div className="flex items-center ml-16 mb-[11rem] reveal xxl:ml-[25rem]">
         <div className="xl:w-[32.5rem] mr-10 lg:w-[25rem] lg:h-[25rem] xl:h-[32rem] flex flex-col justify-between">
           <div className="flex justify-between reveal">
             <BlueBox text2="OUR MISSION" className=" w-full h-full" />
@@ -100,10 +100,10 @@ function About() {
         </div>
 
         <div className="mt-10 ml-20 xl:w-[30rem] lg:w-[25rem] reveal">
-          <h1 className=" xl:text-3xl lg:text-2xl font-bold font-poppins text-gray_text">
+          <h1 className="xxl:text-4xl xl:text-3xl lg:text-2xl font-bold font-poppins text-gray_text">
             Data Weaver, driven by passion and enthusiasm.
           </h1>
-          <p className="xl:text-lg w-[] font-normal mt-8 font-avenir text-balance text-gray_text">
+          <p className="xxl:text-xl xl:text-lg  font-normal mt-8 font-avenir text-balance text-gray_text">
             We specialise in taking your business digital, by optimizing the
             processes & simplifying your digital journey. Our qualified team of
             professionals, is just the right ones, who vision the potential of
@@ -111,12 +111,12 @@ function About() {
           </p>
         </div>
       </div>
-      <div className="flex items-center justify-end mb-[10rem]  xl:mx-16 lg:mr-10 reveal">
+      <div className="flex items-center justify-end mb-[10rem]  xl:mx-16 lg:mr-10 reveal xxl:mr-[25rem]">
         <div className="mt-10 xl:ml-20 lg:mr-20 xl:w-[30rem] lg:w-[25rem]">
-          <h1 className=" xl:text-3xl lg:text-2xl font-bold font-poppins text-gray_text">
+          <h1 className="xxl:text-4xl xl:text-3xl lg:text-2xl font-bold font-poppins text-gray_text">
             Tailored technology services to strengthen business operations.
           </h1>
-          <p className="xl:text-lg w-[] font-normal mt-8 font-avenir text-balance text-gray_text">
+          <p className="xxl:text-xl xl:text-lg  font-normal mt-8 font-avenir text-balance text-gray_text">
             To drive profitable results by understanding the business process
             and unravelling the best suited solutions. We visualize to help you
             expand & boost your business, by consulting suitable digital
@@ -131,11 +131,11 @@ function About() {
           <img src={aboutImage3} className="reveal" />
         </div>
       </div>
-      <div className="flex mb-16 ml-16 reveal">
+      <div className="flex mb-16 ml-16 reveal xxl:ml-[20rem]">
         <BlueBox text2="OUR PROCESS" className="w-full h-full" />
       </div>
-      <div className="flex justify-between items-start w-[full] h-[9rem] xl:mx-[11rem] lg:mx-[8rem] xl:mb-[30rem] lg:mb-[20rem] reveal">
-        <div className="">
+      <div className="flex justify-center items-start w-[full] h-[9rem] xl:mx-[11rem] lg:mx-[8rem] xl:mb-[30rem] lg:mb-[20rem] reveal">
+        <div className="xxl:mr-[10rem]  xl:mr-[5rem]">
           <img src={aboutImage4} />
           <div className="py-2 mx-2 w-[10rem] mt-3">
             <h1 className="text-gray_text xl:font-bold lg:font-semibold xl:text-2xl lg:text-xl mb-4">
@@ -146,7 +146,7 @@ function About() {
             </p>
           </div>
         </div>
-        <div className="">
+        <div className="xxl:mr-[10rem] xl:mr-[5rem]">
           <img src={aboutImage5} />
           <div className="py-2 mx-2 w-[10rem] mt-3">
             <h1 className="text-gray_text xl:font-bold lg:font-semibold xl:text-2xl lg:text-xl mb-4">
@@ -157,7 +157,7 @@ function About() {
             </p>
           </div>
         </div>{" "}
-        <div className="">
+        <div className="xxl:mr-[10rem] xl:mr-[5rem]">
           <img src={aboutImage6} />
           <div className="py-2 mx-2 w-[10rem] mt-6">
             <h1 className="text-gray_text xl:font-bold lg:font-semibold xl:text-2xl lg:text-xl mb-4">
@@ -168,7 +168,7 @@ function About() {
             </p>
           </div>
         </div>{" "}
-        <div className="">
+        <div className="xxl:mr-[10rem]  xl:mr-[5rem]">
           <img className="w-[93px] h-[78px] " src={aboutImage8} />
           <div className="py-2 mx-2 w-[10rem] mt-4">
             <h1 className="text-gray_text xl:font-bold lg:font-semibold xl:text-2xl lg:text-xl mb-4">
@@ -179,7 +179,7 @@ function About() {
             </p>
           </div>
         </div>{" "}
-        <div className="">
+        <div className="xxl:mr-[10rem] ">
           <img className="size[75px]" src={aboutImage7} />
           <div className="py-2 mx-2 w-[10rem] mt-4">
             <h1 className="text-gray_text xl:font-bold lg:font-semibold xl:text-2xl lg:text-xl mb-4">
