@@ -10,6 +10,7 @@ import zohoCusImage5 from "../../assets/zohoCusImage5.png";
 import zohoCusImage6 from "../../assets/zohoCusImage6.png";
 import { useEffect } from "react";
 import { reveal } from "../../utils/helper";
+import FooterTop from "../../UI/FooterTop";
 
 const images = [
   {
@@ -77,6 +78,7 @@ function ZohoCustomization() {
       <div className="">
         <ImageScrollContent steps={images} />
       </div>
+      <FooterTop content="At Data Weaver, we're not just Zoho Customization - we're about empowering your business for success. Trust us to understand your needs, strategize effectively, and execute flawlessly. Experience the Data Weaver today!" />
     </div>
   );
 }

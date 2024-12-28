@@ -103,12 +103,12 @@ const testimonials = [
 const TestimonialSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLg, setIsLg] = useState(
-    window.innerWidth >= 976 && window.innerWidth < 1440
+    window.innerWidth >= 976 && window.innerWidth < 1600
   );
 
   useEffect(() => {
     const handleResize = () => {
-      setIsLg(window.innerWidth >= 976 && window.innerWidth < 1440);
+      setIsLg(window.innerWidth >= 976 && window.innerWidth < 1600);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -120,7 +120,7 @@ const TestimonialSlider = () => {
       setCurrentIndex((prevIndex) =>
         prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); 
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [currentIndex]);

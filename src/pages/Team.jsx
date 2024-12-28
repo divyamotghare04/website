@@ -3,43 +3,60 @@ import { useEffect } from "react";
 import FooterTop from "../UI/FooterTop";
 import Navbar from "../UI/Navbar";
 import horizontalBlueLogo from "../assets/horizontal_blue_logo.png";
+
 import teamImage1 from "../assets/teamImage1.png";
 import BlueBox from "../components/BlueBox";
 import ImageContainer from "../components/ImageContainer";
 import { reveal } from "../utils/helper";
+import ritikaBackend from "../assets/ritikaBackend.jpg";
+import ritikaCheese from "../assets/ritikaCheese.webp";
+import ritikaFoodie from "../assets/ritikaFoodie.jpg";
+import ritikaImage from "../assets/ritikaImage.jpg";
 
-// Team data arrays
 const cofounder = [
-  { img: "", name: "LOREM IPSUM", role: "Role" },
-  { img: "", name: "LOREM IPSUM", role: "Role" },
-  { img: "", name: "LOREM IPSUM", role: "Role" },
+  { img: ["", "", "", ""], name: "LOREM IPSUM", role: "CTO" },
+  {
+    img: [ritikaBackend, ritikaCheese, ritikaFoodie, ritikaImage],
+    name: "Ritika Fargose",
+    role: "CEO",
+  },
+  {
+    img: ["", "", "", ""],
+    name: "LOREM IPSUM",
+    role: "COO",
+  },
 ];
 
 const businessConsultant = [
-  { img: "", name: "LOREM IPSUM", role: "Role" },
-  { img: "", name: "LOREM IPSUM", role: "Role" },
-  { img: "", name: "LOREM IPSUM", role: "Role" },
+  { img: ["", "", "", ""], name: "LOREM IPSUM", role: "Role" },
+  { img: ["", "", "", ""], name: "LOREM IPSUM", role: "Role" },
+  { img: ["", "", "", ""], name: "LOREM IPSUM", role: "Role" },
 ];
 
 const advisory = [
-  { img: "", name: "LOREM IPSUM", role: "Role" },
-  { img: "", name: "LOREM IPSUM", role: "Role" },
+  { img: ["", "", "", ""], name: "LOREM IPSUM", role: "Role" },
+  { img: ["", "", "", ""], name: "LOREM IPSUM", role: "Role" },
 ];
 
 const employees = Array(11).fill({
-  img: "",
+  img: ["", "", "", ""],
   name: "LOREM IPSUM",
   role: "Role",
 });
 
 const TeamSection = ({ title1, title2, members }) => (
-  <div className="my-[5rem] flex flex-col xxl:mx-[20rem]">
-    <div className="flex ml-20  items-end reveal">
+  <div className="mt-[5rem] flex flex-col justify-center  xxl:mx-[20rem] ">
+    <div className="flex ml-20  items-end reveal mb-[9rem]">
       <BlueBox text1={title1} text2={title2} />
     </div>
-    <div className="grid grid-cols-3 gap-10 ml-20 reveal items-center">
+    <div className="grid grid-cols-3 gap-10 ml-[10rem]  reveal justify-between items-center">
       {members.map((member, index) => (
-        <ImageContainer key={index} name={member.name} role={member.role} />
+        <ImageContainer
+          key={index}
+          img={member.img}
+          name={member.name}
+          role={member.role}
+        />
       ))}
     </div>
   </div>
@@ -47,13 +64,10 @@ const TeamSection = ({ title1, title2, members }) => (
 
 function Team() {
   useEffect(() => {
-    // Call the reveal function on mount
     reveal();
 
-    // Attach scroll event listener
     window.addEventListener("scroll", reveal);
 
-    // Cleanup event listener on unmount
     return () => window.removeEventListener("scroll", reveal);
   }, []);
 

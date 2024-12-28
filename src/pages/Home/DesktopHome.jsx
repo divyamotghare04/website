@@ -1,25 +1,22 @@
 import React, { useEffect } from "react";
-import homeImage1 from "../assets/homeImage1.png";
-import homeImage2 from "../assets/homeImage2.png";
-import homeImage3 from "../assets/homeImage3.png";
-import horizontalLogo from "../assets/horizontal_logo.png";
-import rec from "../assets/rec.png";
-import Navbar from "../UI/Navbar";
-import ArrowButton from "../UI/ArrowButton";
-import BlueBox from "../components/BlueBox";
-import FooterTop from "../UI/FooterTop";
-import TestimonialSlider from "../UI/TestimonialSlider";
-import ExpandingPanels from "../UI/ExpandingPanels";
+import homeImage1 from "../../assets/homeImage1.png";
+import homeImage2 from "../../assets/homeImage2.png";
+import homeImage3 from "../../assets/homeImage3.png";
+import horizontalLogo from "../../assets/horizontal_logo.png";
+import rec from "../../assets/rec.png";
+import Navbar from "../../UI/Navbar";
+import ArrowButton from "../../UI/ArrowButton";
+import BlueBox from "../../components/BlueBox";
+import FooterTop from "../../UI/FooterTop";
+import TestimonialSlider from "../../UI/TestimonialSlider";
+import ExpandingPanels from "../../UI/ExpandingPanels";
 import { Link } from "react-router-dom";
-import { reveal } from "../utils/helper";
+import { reveal } from "../../utils/helper";
 
-const Home = () => {
+const DesktopHome = () => {
   useEffect(() => {
-    // Call the reveal function when component mounts
     reveal();
     window.addEventListener("scroll", reveal);
-
-    // Clean up event listener on unmount
     return () => window.removeEventListener("scroll", reveal);
   }, []);
 
@@ -30,8 +27,6 @@ const Home = () => {
         <Navbar logo={horizontalLogo} img={rec} color="black" />
 
         <div className="flex reveal">
-          {" "}
-          {/* Add reveal class */}
           <div className="mt-[18rem] ml-16 xxl:mr-[15rem]">
             <h1 className="xl:text-7xl xl:w-[50rem] lg:w-[33rem] lg:text-5xl font-extrabold font-poppins text-blue_text">
               <div className="mb-3"> Simplify the process,</div>
@@ -63,7 +58,7 @@ const Home = () => {
               </Link>
             </div>
           </div>
-          <div className="w-[30vw] border flex justify-end">
+          <div className="w-[30vw] flex justify-end">
             <img
               alt=""
               src={homeImage1}
@@ -73,8 +68,6 @@ const Home = () => {
         </div>
 
         <div className="flex items-center mt-[12rem] ml-16 mb-[12rem] reveal">
-          {" "}
-          {/* Add reveal class */}
           <div className="xl:w-[32.5rem] xl:h-[32rem] lg:w-[25rem] lg:h-[24.5rem] flex flex-col justify-between">
             <div className="flex justify-between">
               <BlueBox
@@ -84,10 +77,9 @@ const Home = () => {
               />
               <div className="lg:w-[11.5rem] xl:w-[15rem]">
                 <img src={homeImage2} className="reveal" />{" "}
-                {/* Add reveal class */}
               </div>
             </div>
-            <img src={homeImage3} className="reveal" /> {/* Add reveal class */}
+            <img src={homeImage3} className="reveal" />
           </div>
           <div className="ml-20">
             <h1 className="xl:text-3xl lg:text-xl font-bold font-poppins text-gray_text">
@@ -143,4 +135,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default DesktopHome;

@@ -10,7 +10,7 @@ function FooterTop({ content }) {
         <h2 className="xl:text-5xl xxl:text-7xl lg:text-3xl font-semibold font-poppins mb-4 shadow-text">
           Let's Get Started?
         </h2>
-        <p className="w-[517px] xxl:text-3xl font-avenir xl:text-xl mb-5">
+        <p className="w-[517px] xxl:w-[63rem] xxl:text-3xl font-avenir xl:text-xl mb-5">
           {content}
         </p>
         <Link to="/contact">

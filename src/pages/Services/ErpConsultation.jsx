@@ -38,11 +38,11 @@ function ErpConsultation() {
       <div>
         <img src={erpConsultationImage1} className="w-full h-auto reveal" />
       </div>
-      <div className="flex xl:p-20 xl:m-10 lg:p-16 items-center justify-between xxl:mx-[28rem] reveal">
-        <div className="lg:size-80 xl:w-full xl:h-full">
+      <div className="flex xl:p-20 xl:m-10 lg:p-16 items-center justify-center reveal">
+        <div className="lg:size-80 w-full h-full xxl:w-96 xxl:h-full lg:mr-[5rem] ">
           <img src={erpConsultationImage2} />
         </div>
-        <div className="lg:w-[30rem] xl:w-[62rem]">
+        <div className="lg:w-[30rem] xl:w-[62rem] ">
           <h1 className="font-poppins text-gray_text xl:text-3xl xxl:text-4xl lg:text-xl font-bold mb-4">
             Future-Proof Your Operations with Tailored Software Solutions
           </h1>

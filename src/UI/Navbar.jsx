@@ -12,42 +12,10 @@ const navigation = [
 
 function Navbar({ logo, color }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isProductsOpen, setIsProductsOpen] = useState(false);
-
   const location = useLocation();
-  const isServicesRoute =
-    location.pathname.startsWith("/services") || mobileMenuOpen;
-  const isProductsRoute =
-    location.pathname.startsWith("/products") || mobileMenuOpen;
 
   const isActive = (path) => {
     return location.pathname === path;
-  };
-
-  const toggleServicesMenu = () => {
-    setIsServicesOpen(!isServicesOpen);
-  };
-
-  const toggleProductsMenu = () => {
-    setIsProductsOpen(!isProductsOpen);
-  };
-
-  // Open on hover
-  const handleMouseEnterServices = () => {
-    setIsServicesOpen(true);
-  };
-
-  const handleMouseLeaveServices = () => {
-    setIsServicesOpen(false);
-  };
-
-  const handleMouseEnterProducts = () => {
-    setIsProductsOpen(true);
-  };
-
-  const handleMouseLeaveProducts = () => {
-    setIsProductsOpen(false);
   };
 
   return (
@@ -57,7 +25,8 @@ function Navbar({ logo, color }) {
           aria-label="Global"
           className="flex items-center xxl:mx-[20rem] justify-between py-6"
         >
-          <div className="flex lg:flex-1 ml-16  relative">
+          {/* Desktop Logo */}
+          <div className="hidden lg:flex lg:flex-1 ml-16 relative">
             <a href="/" className="p-1.5">
               <span className="sr-only">Your Company</span>
               <img
@@ -67,44 +36,35 @@ function Navbar({ logo, color }) {
               />
             </a>
           </div>
-          <div className="flex lg:hidden">
+
+          <div className="lg:hidden ml-4">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
               style={{
-                color: color,
+                color: "white",
               }}
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
+              className="inline-flex items-center justify-center rounded-md p-2.5"
             >
               <span className="sr-only">Open main menu</span>
-              <Bars3Icon aria-hidden="true" className="h-6 w-6" />
+              <Bars3Icon aria-hidden="true" className="h-10 w-10" />
             </button>
           </div>
+
+          {/* Desktop Navigation */}
           <div className="mx-10 hidden lg:flex xxl:gap-x-20 lg:gap-x-12 xl:gap-x-16">
+            {/* Services Menu */}
             <Menu as="div" className="relative inline-block text-left">
               <MenuButton
-                className={`inline-flex w-full justify-center xxl:text-2xl xl:text-xl lg:text-lg font-medium font-poppins leading-6 hover:font-bold ${
-                  isServicesRoute
-                    ? "underline decoration-green decoration-2"
-                    : ""
-                }`}
-                style={{
-                  color: color,
-                }}
+                className="inline-flex w-full justify-center xxl:text-2xl xl:text-xl lg:text-lg font-medium font-poppins leading-6 hover:font-bold"
+                style={{ color: color }}
               >
                 Services
               </MenuButton>
-
-              <MenuItems
-                transition
-                className="absolute left-0 z-10 mt-2 w-56 xxl:w-[15rem] origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none"
-              >
+              <MenuItems className="absolute left-0 z-10 mt-2 w-56 xxl:w-[15rem] origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none">
                 <div className="py-4 px-2">
                   <MenuItem>
                     <a
-                      style={{
-                        color: "black",
-                      }}
                       href="/services/data-management"
                       className="block px-4 py-2 font-avenir xxl:text-xl text-lg"
                     >
@@ -113,9 +73,6 @@ function Navbar({ logo, color }) {
                   </MenuItem>
                   <MenuItem>
                     <a
-                      style={{
-                        color: "black",
-                      }}
                       href="/services/erp-consultation"
                       className="block px-4 py-2 xxl:text-xl font-avenir text-lg"
                     >
@@ -124,9 +81,6 @@ function Navbar({ logo, color }) {
                   </MenuItem>
                   <MenuItem>
                     <a
-                      style={{
-                        color: "black",
-                      }}
                       href="/services/zoho-customization"
                       className="block px-4 py-2 xxl:text-xl font-avenir text-lg"
                     >
@@ -137,30 +91,18 @@ function Navbar({ logo, color }) {
               </MenuItems>
             </Menu>
 
+            {/* Products Menu */}
             <Menu as="div" className="relative inline-block text-left">
               <MenuButton
-                className={` hover:font-bold xxl:text-2xl inline-flex w-full justify-center xl:text-xl lg:text-lg font-medium font-poppins leading-6 ${
-                  isProductsRoute
-                    ? "underline decoration-green decoration-2"
-                    : ""
-                }`}
-                style={{
-                  color: color,
-                }}
+                className="hover:font-bold xxl:text-2xl inline-flex w-full justify-center xl:text-xl lg:text-lg font-medium font-poppins leading-6"
+                style={{ color: color }}
               >
                 Products
               </MenuButton>
-
-              <MenuItems
-                transition
-                className="absolute left-0 z-10 mt-2 w-56 xxl:w-[10rem] origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none"
-              >
+              <MenuItems className="absolute left-0 z-10 mt-2 w-56 xxl:w-[10rem] origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none">
                 <div className="py-4 px-2">
                   <MenuItem>
                     <a
-                      style={{
-                        color: "black",
-                      }}
                       href="/products/zoho-one"
                       className="block px-4 py-2 font-avenir xxl:text-xl text-lg"
                     >
@@ -169,9 +111,6 @@ function Navbar({ logo, color }) {
                   </MenuItem>
                   <MenuItem>
                     <a
-                      style={{
-                        color: "black",
-                      }}
                       href="/products/erp-next"
                       className="block px-4 py-2 xxl:text-xl font-avenir text-lg"
                     >
@@ -182,13 +121,12 @@ function Navbar({ logo, color }) {
               </MenuItems>
             </Menu>
 
+            {/* Other Navigation Items */}
             {navigation.map((item) => (
               <a
-                style={{
-                  color: color,
-                }}
                 key={item.name}
                 href={item.href}
+                style={{ color: color }}
                 className={`xl:text-xl hover:font-bold xxl:text-2xl lg:text-lg font-medium font-poppins leading-6 ${
                   isActive(item.href)
                     ? "underline decoration-green decoration-2"
@@ -200,6 +138,7 @@ function Navbar({ logo, color }) {
             ))}
           </div>
         </nav>
+
         <Dialog
           open={mobileMenuOpen}
           onClose={setMobileMenuOpen}
@@ -207,15 +146,7 @@ function Navbar({ logo, color }) {
         >
           <div className="fixed inset-0 z-50" />
           <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
-                <img
-                  alt=""
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  className="h-8 w-auto"
-                />
-              </a>
+            <div className="flex items-center justify-end">
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
@@ -230,11 +161,9 @@ function Navbar({ logo, color }) {
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
                     <a
-                      style={{
-                        color: color,
-                      }}
                       key={item.name}
                       href={item.href}
+                      style={{ color: color }}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-bold leading-7 text-gray-900 hover:bg-gray-50"
                     >
                       {item.name}

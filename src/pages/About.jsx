@@ -179,7 +179,7 @@ function About() {
             </p>
           </div>
         </div>{" "}
-        <div className="xxl:mr-[10rem] ">
+        <div className=" ">
           <img className="size[75px]" src={aboutImage7} />
           <div className="py-2 mx-2 w-[10rem] mt-4">
             <h1 className="text-gray_text xl:font-bold lg:font-semibold xl:text-2xl lg:text-xl mb-4">

@@ -6,8 +6,8 @@ export default {
       sm: "480px",
       md: "768px",
       lg: "976px",
-      xl: "1440px",
-      xxl: "2560px",
+      xl: "1600px",
+      xxl: "2000px",
     },
     colors: {
       primary: "#1d1651",
