@@ -1,20 +1,11 @@
 import { useState, useEffect } from "react";
 
 const useDeviceType = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    const mobileMatch =
-      /android|iphone|ipad|mobile|blackberry|webos|opera mini|windows phone/i.test(
-        userAgent
-      );
-
-    const isSmallScreen = window.innerWidth <= 768; // Adjust this threshold based on your requirements.
-    setIsMobile(mobileMatch || isSmallScreen);
-
     const handleResize = () => {
-      setIsMobile(mobileMatch || window.innerWidth <= 768);
+      setIsMobile(window.innerWidth <= 768);
     };
 
     window.addEventListener("resize", handleResize);

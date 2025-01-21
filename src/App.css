@@ -5,10 +5,18 @@
   height: 165px;
   left: -275px;
   top: 20px;
-
-  /* New color */
   background: linear-gradient(268.94deg, #1d1651 27.84%, #352893 99.51%);
   transform: rotate(-36deg);
+}
+
+/* XXL screens */
+@media (min-width: 1536px) {
+  .top-img {
+    width: 900px;     /* Increased width */
+    height: 210px;    /* Increased height proportionally */
+    left: -350px;     /* Adjusted left position to maintain visual balance */
+    top: 30px;        /* Slightly adjusted top position */
+  }
 }
 
 /* Mask group */

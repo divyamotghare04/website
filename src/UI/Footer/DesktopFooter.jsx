@@ -1,8 +1,8 @@
 import React from "react";
-import horizontalLogo from "../assets/horizontal_logo.png";
-import ArrowButton from "./ArrowButton";
+import horizontalLogo from "../../assets/horizontal_logo.png";
+import ArrowButton from "../ArrowButton";
 
-const Footer = ({ content }) => {
+const DesktopFooter = ({ content }) => {
   return (
     <footer>
       <div className="bg-primary w-full xxl:h-[30rem] h-[310px] text-white ">
@@ -74,4 +74,4 @@ const Footer = ({ content }) => {
   );
 };
 
-export default Footer;
+export default DesktopFooter;

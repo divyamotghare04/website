@@ -1,6 +1,8 @@
 import { Outlet } from "react-router-dom";
-
 import Footer from "./Footer";
+
+// import DesktopFooter from "./Footer/DesktopFooter";
+
 
 function AppLayout() {
   return (

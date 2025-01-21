@@ -58,20 +58,14 @@ function ZohoOne() {
   return (
     <div>
       <Navbar logo={horizontalBlueLogo} />
-      <header className="mt-[10rem] mb-20 text-4xl font-extrabold reveal xxl:text-5xl xxl:mt-[15rem] ml-16 xxl:ml-[24rem]">
-        Our Products
-      </header>
-
-      <div className="mb-20 reveal">
-        <img src={zohoImage1} alt="Zoho One Image" className="w-full h-auto" />
-      </div>
-
-      <section className="flex justify-center items-center mb-20 reveal">
-        <div className="mr-[2rem] xxl:mr-[10rem]">
-          <h1 className="font-bold text-gray_text ml-10 xxl:text-4xl xl:text-3xl lg:text-2xl">
+      <div className="mt-[9.8125rem] flex items-start justify-between mx-16 mb-10 reveal xxl:ml-[24rem] xxl:mt-[15rem] xxl:mr-[24rem]">
+        <div>
+          <h1 className=" xxl:mr-[20rem] xxl:text-6xl font-inter font-extrabold lg:text-2xl xl:text-4xl text-black">
             Zoho One
           </h1>
-          <p className="text-gray_text font-avenir ml-10 xxl:text-2xl xl:text-xl lg:text-base xl:w-[36rem] lg:w-[28rem]">
+        </div>
+        <div className="xl:w-[45rem] lg:w-[36rem]">
+          <p className="font-avenir xxl:text-2xl xl:text-xl lg:text-base text-gray_text">
             Welcome to Data Weaver, where we elevate your business to new
             heights with our expert IT and data analytics services. Partnering
             with Zoho One, a cutting-edge suite of innovative applications, we
@@ -79,17 +73,43 @@ function ZohoOne() {
             business requirements.
           </p>
         </div>
-        <div className="flex flex-col xl:w-[32rem] lg:w-[20rem]">
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              to={item.href}
-              className="p-2 text-gray_text border-b border-solid border-gray_line font-semibold font-poppins flex justify-between items-center xxl:text-2xl xl:text-xl"
-            >
-              <span>{item.name}</span>
-              <FaChevronRight className="text-green" />
-            </Link>
-          ))}
+      </div>
+
+      <div className="mb-20 reveal">
+        <img src={zohoImage1} alt="Zoho One Image" className="w-full h-auto" />
+      </div>
+
+      <section className="max-w-6xl mx-auto px-6 lg:px-16 mb-20 reveal">
+        <div className="grid grid-cols-1 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {navigation.slice(0, 3).map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className="flex justify-center items-center p-6 bg-white border border-gray-300 rounded-lg shadow-sm hover:shadow-md hover:border-green-500 transition-all duration-300"
+              >
+                <span className="text-gray-800 font-poppins font-bold text-xl">
+                  {item.name}
+                </span>
+                <FaChevronRight className="text-green-500 text-2xl ml-10" />
+              </Link>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 reveal sm:grid-cols-2 gap-6 max-w-[66%] mx-auto">
+            {navigation.slice(3).map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className="flex justify-center items-center p-6 bg-white border border-gray-300 rounded-lg shadow-sm hover:shadow-md hover:border-green-500 transition-all duration-300"
+              >
+                <span className="text-gray-800 font-poppins font-bold text-xl">
+                  {item.name}
+                </span>
+                <FaChevronRight className="text-green-500 text-2xl ml-10" />
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -139,7 +159,7 @@ function ZohoOne() {
         </div>
       </section>
 
-      <FooterTop content="Experience the power of reliable, strategic data management with Data Weaver..." />
+      <FooterTop content="Experience the power of reliable, strategic data management with Data Weaver. Elevate your business potential and unlock endless possibilities. Contact us today to learn more!" />
     </div>
   );
 }

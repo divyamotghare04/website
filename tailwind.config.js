@@ -24,6 +24,7 @@ export default {
       gray_line: "#D9D9D9",
       blue_gray: "#FFCFD8DC",
       gray_line: "#c0c6cc",
+      blue_bg: "#5841E1",
     },
     extend: {
       fontFamily: {
@@ -31,6 +32,7 @@ export default {
         playfair_display: ["Playfair Display"],
         avenir: ["Avenir"],
         inter: ["Inter"],
+        montserrat: ["Montserrat"],
       },
     },
     animation: {

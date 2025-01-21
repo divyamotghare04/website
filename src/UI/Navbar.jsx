@@ -25,7 +25,6 @@ function Navbar({ logo, color }) {
           aria-label="Global"
           className="flex items-center xxl:mx-[20rem] justify-between py-6"
         >
-          {/* Desktop Logo */}
           <div className="hidden lg:flex lg:flex-1 ml-16 relative">
             <a href="/" className="p-1.5">
               <span className="sr-only">Your Company</span>
@@ -51,9 +50,7 @@ function Navbar({ logo, color }) {
             </button>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="mx-10 hidden lg:flex xxl:gap-x-20 lg:gap-x-12 xl:gap-x-16">
-            {/* Services Menu */}
             <Menu as="div" className="relative inline-block text-left">
               <MenuButton
                 className="inline-flex w-full justify-center xxl:text-2xl xl:text-xl lg:text-lg font-medium font-poppins leading-6 hover:font-bold"
@@ -91,7 +88,6 @@ function Navbar({ logo, color }) {
               </MenuItems>
             </Menu>
 
-            {/* Products Menu */}
             <Menu as="div" className="relative inline-block text-left">
               <MenuButton
                 className="hover:font-bold xxl:text-2xl inline-flex w-full justify-center xl:text-xl lg:text-lg font-medium font-poppins leading-6"
@@ -121,7 +117,6 @@ function Navbar({ logo, color }) {
               </MenuItems>
             </Menu>
 
-            {/* Other Navigation Items */}
             {navigation.map((item) => (
               <a
                 key={item.name}

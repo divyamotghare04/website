@@ -84,9 +84,13 @@ function About() {
           ref={ref}
           className="flex w-[35rem] justify-between text-center items-center p-10 bg-white "
         >
-          <StatItem value={25} label="Projects" shouldAnimate={shouldAnimate} />
-          <StatItem value={15} label="Clients" shouldAnimate={shouldAnimate} />
-          <StatItem value={10} label="Teams" shouldAnimate={shouldAnimate} />
+          <StatItem
+            value={100}
+            label="Projects"
+            shouldAnimate={shouldAnimate}
+          />
+          <StatItem value={50} label="Clients" shouldAnimate={shouldAnimate} />
+          <StatItem value={15} label="Teams" shouldAnimate={shouldAnimate} />
         </div>
       </div>
 

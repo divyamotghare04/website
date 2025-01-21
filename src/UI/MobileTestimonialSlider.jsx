@@ -100,153 +100,77 @@ const testimonials = [
   },
 ];
 
-const TestimonialSlider = () => {
+const MobileTestimonialSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isLg, setIsLg] = useState(
-    window.innerWidth >= 300 && window.innerWidth < 1600
-  );
 
-  // Reference to the auto-slide interval
-  const [autoSlideInterval, setAutoSlideInterval] = useState(null);
-
+  // Auto-slide effect
   useEffect(() => {
-    const handleResize = () => {
-      setIsLg(window.innerWidth >= 976 && window.innerWidth < 1600);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  // Auto-slide effect with interval management
-  useEffect(() => {
-    startAutoSlide();
-
-    return () => stopAutoSlide(); // Clear interval on unmount
-  }, [currentIndex]);
-
-  const startAutoSlide = () => {
-    stopAutoSlide(); // Clear any existing interval
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>
         prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
       );
-    }, 2000);
-    setAutoSlideInterval(interval);
-  };
+    }, 4000);
 
-  const stopAutoSlide = () => {
-    if (autoSlideInterval) {
-      clearInterval(autoSlideInterval);
-    }
-  };
+    return () => clearInterval(interval);
+  }, []);
 
-  // Manual navigation with reset logic
   const handlePrevClick = () => {
-    stopAutoSlide();
     setCurrentIndex((prevIndex) =>
       prevIndex > 0 ? prevIndex - 1 : testimonials.length - 1
     );
-    startAutoSlide(); // Restart the auto-slide
   };
 
   const handleNextClick = () => {
-    stopAutoSlide();
     setCurrentIndex((prevIndex) =>
       prevIndex < testimonials.length - 1 ? prevIndex + 1 : 0
     );
-    startAutoSlide(); // Restart the auto-slide
   };
 
   return (
-    <div className="flex flex-col">
-      <div className="flex">
-        <div className="bg-white xl:ml-10 lg:ml-5 flex flex-col">
-          <div className="xl:w-[34rem] lg:w-[42rem] xl:h-[30rem] lg:h-[26rem] bg-blue_team bg-opacity-10 p-6 shadow-lg">
-            <p className="text-gray_text text-lg font-inter mb-4">
-              <RiDoubleQuotesL size={30} color="green" />
-              {testimonials[currentIndex].testimony}
-              <div className="flex justify-between">
-                <h1></h1>
-                <RiDoubleQuotesL
-                  size={30}
-                  color="green"
-                  className="transform scale-x-[-1]"
-                />
-              </div>
+    <div className="flex flex-col items-center">
+      <div className="bg-blue_bg flex flex-col p-6 shadow-lg">
+        <p className="text-white text-lg font-inter mb-4">
+          <RiDoubleQuotesL size={30} color="green" />
+          {testimonials[currentIndex].testimony}
+          <div className="flex justify-between">
+            <h1></h1>
+            <RiDoubleQuotesL
+              size={30}
+              color="green"
+              className="transform scale-x-[-1]"
+            />
+          </div>
+        </p>
+
+        <div className="text-white bg-blue_bg mt-4 flex ml-10 mb-10">
+          <div>
+            <img
+              className="border rounded-full w-[2rem] mr-3"
+              src={testimonials[currentIndex].image}
+            />
+          </div>
+          <div>
+            <h4 className="font-bold font-poppins">
+              {testimonials[currentIndex].name}
+            </h4>
+            <p className="text-sm">{testimonials[currentIndex].title}</p>
+            <p className="font-semibold font-poppins">
+              {testimonials[currentIndex].company}
             </p>
           </div>
-
-          <div className="text-primary mt-4 flex ml-10">
-            <div>
-              <img
-                className="border rounded-full w-[2rem] mr-3"
-                src={testimonials[currentIndex].image}
-              />
-            </div>
-            <div>
-              <h4 className="font-bold font-poppins">
-                {testimonials[currentIndex].name}
-              </h4>
-              <p className="text-sm">{testimonials[currentIndex].title}</p>
-              <p className="font-semibold font-poppins">
-                {testimonials[currentIndex].company}
-              </p>
-            </div>
-          </div>
         </div>
-
-        {!isLg && currentIndex + 1 < testimonials.length && (
-          <div className="bg-white xl:ml-10 lg:ml-5 flex flex-col">
-            <div className="xl:w-[34rem] lg:w-[22rem] xl:h-[30rem] lg:h-[46rem] bg-blue_team bg-opacity-10 p-6 shadow-lg">
-              <p className="text-gray_text text-lg font-inter mb-4">
-                <RiDoubleQuotesL size={30} color="green" />
-                {testimonials[currentIndex + 1].testimony}
-                <div className="flex justify-between">
-                  <h1></h1>
-                  <RiDoubleQuotesL
-                    size={30}
-                    color="green"
-                    className="transform scale-x-[-1]"
-                  />
-                </div>
-              </p>
-            </div>
-
-            <div className="text-primary mt-4 flex ml-10">
-              <div>
-                <img
-                  className="border rounded-full w-[2rem] mr-3"
-                  src={testimonials[currentIndex + 1].image}
-                />
-              </div>
-              <div>
-                <h4 className="font-bold font-poppins">
-                  {testimonials[currentIndex + 1].name}
-                </h4>
-                <p className="text-sm">
-                  {testimonials[currentIndex + 1].title}
-                </p>
-                <p className="font-semibold font-poppins">
-                  {testimonials[currentIndex + 1].company}
-                </p>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
 
-      <div className="flex space-x-3 mt-6 xl:ml-10 lg:ml-6">
+      <div className="flex space-x-3 mt-6 items-center">
         <button
           onClick={handlePrevClick}
-          disabled={currentIndex === 0}
-          className="p-2 bg-white border border-green text-green hover:bg-green hover:text-white disabled:bg-gray_line disabled:text-green disabled:border-green disabled:hover:bg-gray_line transition"
+          className="p-2 bg-blue_bg border border-white text-white hover:bg-white hover:text-black transition"
         >
           <GoArrowLeft size={24} />
         </button>
         <button
           onClick={handleNextClick}
-          disabled={currentIndex === testimonials.length - 1}
-          className="p-2 bg-white border border-green text-green hover:bg-green hover:text-white disabled:bg-gray_line disabled:text-green disabled:border-green disabled:hover:bg-gray_line transition"
+          className="p-2 bg-blue_bg border border-white text-white  hover:bg-white hover:text-black transition"
         >
           <GoArrowRight size={24} />
         </button>
@@ -255,4 +179,4 @@ const TestimonialSlider = () => {
   );
 };
 
-export default TestimonialSlider;
+export default MobileTestimonialSlider;

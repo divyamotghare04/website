@@ -35,14 +35,20 @@ function ErpConsultation() {
           </p>
         </div>
       </div>
+
       <div>
         <img src={erpConsultationImage1} className="w-full h-auto reveal" />
       </div>
-      <div className="flex xl:p-20 xl:m-10 lg:p-16 items-center justify-center reveal">
-        <div className="lg:size-80 w-full h-full xxl:w-96 xxl:h-full lg:mr-[5rem] ">
-          <img src={erpConsultationImage2} />
+      <div className="mx-auto my-16 flex lg:max-w-[50rem] xl:max-w-screen-xl items-center justify-center reveal  gap-8">
+        <div className="w-full max-w-lg lg:w-1/3">
+          <img
+            src={erpConsultationImage2}
+            alt="ERP Consultation"
+            className="w-full h-auto object-cover"
+          />
         </div>
-        <div className="lg:w-[30rem] xl:w-[62rem] ">
+
+        <div className="flex-1">
           <h1 className="font-poppins text-gray_text xl:text-3xl xxl:text-4xl lg:text-xl font-bold mb-4">
             Future-Proof Your Operations with Tailored Software Solutions
           </h1>
@@ -59,6 +65,7 @@ function ErpConsultation() {
           </p>
         </div>
       </div>
+
       <div className="flex justify-center text-center reveal">
         <h3 className="font-avenir font-semibold lg:text-xl xl:text-3xl lg:px-10 xl:px-20 mx-20 mb-16">
           Our seasoned consultants bring a wealth of experience to the table,
@@ -111,7 +118,7 @@ function ErpConsultation() {
           </p>
         </div>
       </div>
-      <FooterTop content="Experience the power of reliable, strategic data management with Data Weaver. Elevate your business potential and unlock endless possibilities. Contact us today to learn more!" />
+      <FooterTop content="Partner with Data Weaver snd elevate your ERP experience to new heights!" />
     </div>
   );
 }

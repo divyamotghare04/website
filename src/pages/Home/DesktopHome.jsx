@@ -3,6 +3,8 @@ import homeImage1 from "../../assets/homeImage1.png";
 import homeImage2 from "../../assets/homeImage2.png";
 import homeImage3 from "../../assets/homeImage3.png";
 import horizontalLogo from "../../assets/horizontal_logo.png";
+import horizontalBlueLogo from "../../assets/horizontal_blue_logo.png";
+
 import rec from "../../assets/rec.png";
 import Navbar from "../../UI/Navbar";
 import ArrowButton from "../../UI/ArrowButton";
@@ -22,12 +24,17 @@ const DesktopHome = () => {
 
   return (
     <div>
-      <div className="flex flex-col items-center">
-        <img alt="" src={rec} className="top-img " />
+      <div className="flex flex-col items-center ">
+        <img
+          alt=""
+          src={rec}
+          className="top-img  xxl:w-[80rem] xxl:h-[20rem] xxl:-left-[350px] xxl:top-[30px]"
+        />
+
         <Navbar logo={horizontalLogo} img={rec} color="black" />
 
-        <div className="flex reveal">
-          <div className="mt-[18rem] ml-16 xxl:mr-[15rem]">
+        <div className="relative flex reveal w-full">
+          <div className="mt-[18rem] ml-16 xxl:ml-[40rem] ">
             <h1 className="xl:text-7xl xl:w-[50rem] lg:w-[33rem] lg:text-5xl font-extrabold font-poppins text-blue_text">
               <div className="mb-3"> Simplify the process,</div>
               <div> Optimize the growth</div>
@@ -58,11 +65,11 @@ const DesktopHome = () => {
               </Link>
             </div>
           </div>
-          <div className="w-[30vw] flex justify-end">
+          <div className="relative w-[140vh]  xl:w-[120vh] xxl:w-[80vh] xl:h-[100vh] l:h-[100vh] xxl:h-[80vh]  top-0 right-0 ">
             <img
               alt=""
               src={homeImage1}
-              className="xl:w-[42rem] xxl:h-[56rem]  lg:h-[40rem] reveal" // Add reveal class
+              className="absolute right-0 top-0  w-full h-full object-cover"
             />
           </div>
         </div>
@@ -105,8 +112,6 @@ const DesktopHome = () => {
         </div>
 
         <div className="relative reveal">
-          {" "}
-          {/* Add reveal class */}
           <div className="flex ml-16 mb-[12rem]">
             <BlueBox
               text1="WHAT"
@@ -118,8 +123,6 @@ const DesktopHome = () => {
         </div>
 
         <div className="flex ml-16 mb-[12rem] reveal">
-          {" "}
-          {/* Add reveal class */}
           <BlueBox
             text1="WHAT OUR"
             text2="CLIENTS SAY"
