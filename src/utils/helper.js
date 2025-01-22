@@ -26,6 +26,17 @@ import people from "../assets/people.svg";
 import salesiq from "../assets/salesiq.svg";
 import embeddedbi from "../assets/embeddedbi.svg";
 import campaigns from "../assets/campaigns.svg";
+import bigin from "../assets/zohobigin.svg";
+import bookings from "../assets/bookings.svg";
+import sign from "../assets/sign.svg";
+import routeiq from "../assets/routeiq.svg";
+import social from "../assets/social.svg";
+import survey from "../assets/survey.svg";
+import pagesense from "../assets/pagesense.svg";
+import invoice from "../assets/invoice.png";
+import expense from "../assets/expense.svg";
+import recruit from "../assets/recruit.svg";
+// import people from "../assets/people.svg";
 
 export const salesAccordianArray = [
   {
@@ -40,7 +51,7 @@ export const salesAccordianArray = [
     content:
       "Sales deals, support tickets, customer onboarding, order delivery, customer testimonials, contracts, and everything in between—Bigin is all you need to streamline your customer operations in one platform",
     key: 2,
-    image: "",
+    image: bigin,
   },
   {
     title: "SalesIQ",
@@ -54,21 +65,21 @@ export const salesAccordianArray = [
     content:
       "Intuitive appointment scheduling software that ‌empowers everyone to schedule meetings effortlessly.",
     key: 4,
-    image: "",
+    image: bookings,
   },
   {
     title: "Sign",
     content:
       "Zoho Sign is a secure digital signature and workflow automation platform for Indian businesses. Zoho Sign readily integrates with Aadhaar eSign, eStamping, eMudhra and eKYC.",
     key: 5,
-    image: "",
+    image: sign,
   },
   {
     title: "RouteIQ",
     content:
       "Reduce the hassle of planning your own route now and save your valuable time by creating optimized route plans in seconds. These routes are based on the distance, appointments, and drop-ins.",
     key: 6,
-    image: "",
+    image: routeiq,
   },
 ];
 
@@ -78,7 +89,7 @@ export const marketingAccordianArray = [
     content:
       "Unlimited posts with flexible schedule, content calendar to organize your posts, Monitor, respond and engage with audience on real time basis, Get pre-built or customized analytics with Zoho Social.",
     key: 1,
-    image: "",
+    image: social,
   },
   {
     title: "Campaign",
@@ -92,14 +103,14 @@ export const marketingAccordianArray = [
     content:
       "Create surveys, collect data, and draw conclusions in minutes. View your results graphically and in real-time, allowing you to make informed decisions quickly and efficiently. Elevate your marketing strategy with powerful, actionable insights.",
     key: 3,
-    image: "",
+    image: survey,
   },
   {
     title: "Pagesense",
     content:
       "Track and analyze your website's performance and visitor behaviour with ease. Make data-driven changes focusing on conversion, optimization, personalization, and engagement. Customize your website's experience for each visitor to maximize impact and drive business growth.",
     key: 4,
-    image: "",
+    image: pagesense,
   },
   {
     title: "Marketing Automation",
@@ -130,7 +141,7 @@ export const financeAccordianArray = [
     content:
       "Zoho Invoice is designed to help small business owners create professional invoices, manage payments, and ensure compliance with GST regulations, all while offering a free plan to get started.",
     key: 3,
-    image: "",
+    image: invoice,
   },
   {
     title: "Inventory",
@@ -144,7 +155,7 @@ export const financeAccordianArray = [
     content:
       "Zoho Expense offers a comprehensive solution to simplify travel booking, expedite expense reporting, and enhance cost control, enabling businesses to manage expenses efficiently and effectively.",
     key: 5,
-    image: "",
+    image: expense,
   },
 ];
 
@@ -161,7 +172,7 @@ export const hrAccordianArray = [
     content:
       "Zoho Recruit provides a robust platform for staffing agencies and internal HR teams, offering integrated ATS and CRM capabilities, scalability, customization options, and tools to streamline remote hiring processes.",
     key: 2,
-    image: "",
+    image: recruit,
   },
 ];
 
