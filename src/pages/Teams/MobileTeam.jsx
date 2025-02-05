@@ -20,7 +20,7 @@ import MobileImageContainer from "../../components/MobileImageContainer";
 const employees = [
   {
     id: 1,
-    name: "Ritika Fragose",
+    name: "Ritika Fargose",
     role: "Sr. Backend Developer",
     image: ritika,
   },

@@ -50,7 +50,7 @@ const advisory = [
 const employees = [
   {
     id: 1,
-    name: "Ritika Fragose",
+    name: "Ritika Fargose",
     role: "Sr. Backend Developer",
     img: ritika,
   },
