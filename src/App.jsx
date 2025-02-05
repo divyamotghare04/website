@@ -3,22 +3,23 @@ import { Routes, BrowserRouter, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import AppLayout from "./UI/AppLayout";
-import About from "./pages/About";
+
 // import Services from "./pages/Services/Services";
 import Contact from "./pages/Contact";
 // import Products from "./pages/Products";
-import Team from "./pages/Team";
+import Team from "./pages/Teams";
 import ZohoCustomization from "./pages/Services/ZohoCustomization";
 import DataManagement from "./pages/Services/DataManagement";
 import ErpConsultation from "./pages/Services/ErpConsultation";
-import ZohoOne from "./pages/Products/ZohoOne/ZohoOne";
+import ZohoOne from "./pages/Products/ZohoOne/ZohoOnePage";
 import BiAnalytics from "./pages/Products/ZohoOne/BiAnalytics";
-import Hr from "./pages/Products/ZohoOne/Hr.";
+import Hr from "./pages/Products/ZohoOne/HR";
 import Marketing from "./pages/Products/ZohoOne/Marketing";
 import Finance from "./pages/Products/ZohoOne/Finance";
 import Sales from "./pages/Products/ZohoOne/Sales";
 import ErpNext from "./pages/Products/ErpNext";
 import ScrollToTop from "./UI/ScrollToTop";
+import About from "./pages/About";
 
 function App() {
   return (

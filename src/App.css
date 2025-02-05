@@ -12,10 +12,10 @@
 /* XXL screens */
 @media (min-width: 1536px) {
   .top-img {
-    width: 900px;     /* Increased width */
-    height: 210px;    /* Increased height proportionally */
-    left: -350px;     /* Adjusted left position to maintain visual balance */
-    top: 30px;        /* Slightly adjusted top position */
+    width: 900px; /* Increased width */
+    height: 210px; /* Increased height proportionally */
+    left: -350px; /* Adjusted left position to maintain visual balance */
+    top: 30px; /* Slightly adjusted top position */
   }
 }
 
@@ -103,7 +103,7 @@
   white-space: nowrap;
 }
 .marqueeOne {
-  animation: marquee 10s linear infinite;
+  animation: marquee 30s linear infinite;
 }
 
 .marqueeTwo {
@@ -118,7 +118,27 @@
   animation: marquee 10s linear 7.5s infinite;
 }
 
-/* animation */
+.marqueemobile {
+  display: flex;
+  /* overflow: hidden; */
+  white-space: nowrap;
+}
+.marqueeOnemobile {
+  animation: marquee 30s linear infinite;
+}
+
+.marqueeTwomobile {
+  animation: marquee 10s linear 8s infinite;
+}
+
+.marqueeThreemobile {
+  animation: marquee 10s linear 5s infinite;
+}
+
+.marqueeFourmobile {
+  animation: marquee 10s linear 7.5s infinite;
+}
+
 .reveal {
   position: relative;
   transform: translateY(150px);

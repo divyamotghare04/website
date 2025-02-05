@@ -9,14 +9,9 @@ import { GrMenu } from "react-icons/gr";
 import MobileTestimonialSlider from "../../UI/MobileTestimonialSlider";
 import MobileFooterTop from "../../UI/MobileFooterTop";
 import MobileExpandingPanels from "../../UI/MobileExpandingPanels";
+import MobileNavbar from "../../UI/MobileNavbar";
 
 const MobileHome = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen((prevState) => !prevState);
-  };
-
   return (
     <div className="w-full bg-cover bg-center bg-no-repeat">
       <div
@@ -24,26 +19,7 @@ const MobileHome = () => {
           backgroundImage: `url(${mobileHomeBackground})`,
         }}
       >
-        <div className="text-white p-5 relative">
-          <GrMenu size={36} onClick={toggleMenu} className="cursor-pointer" />
-          {menuOpen && (
-            <div className="absolute  bg-white shadow-xl rounded-sm shadow-inherit z-50 w-36">
-              <ul className="text-gray_text">
-                <li className="p-2 hover:bg-gray_line cursor-pointer">
-                  Products
-                </li>
-                <li className="p-2 hover:bg-gray_line cursor-pointer">
-                  Services
-                </li>
-                <li className="p-2 hover:bg-gray_line cursor-pointer">Team</li>
-                <li className="p-2 hover:bg-gray_line cursor-pointer">
-                  About Us
-                </li>
-              </ul>
-            </div>
-          )}
-        </div>
-
+        <MobileNavbar />
         <div className="flex flex-col items-center">
           <div className=" text-white px-6 bg-opacity-75 mb-5">
             <div className="space-y-4">

@@ -45,7 +45,7 @@ const ImageScrollContent = ({ steps }) => {
           <div
             key={index}
             ref={(el) => (imageRefs.current[index] = el)}
-            className="h-[30rem] xxl:h-[50rem] flex items-center justify-center p-8"
+            className="h-[30rem] xxl:h-[50rem]  flex items-center justify-center p-8"
           >
             <img
               src={step.src}
