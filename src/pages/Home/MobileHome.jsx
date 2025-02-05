@@ -79,7 +79,7 @@ const MobileHome = () => {
       </div>
 
       <div className="p-6 flex flex-col items-center bg-gray-50 bg-gradient-to-b from-primary to-secondary ">
-        <h2 className="font-bold text-white text-3xl mb-4 ">
+        <h2 className="font-bold text-white text-center text-3xl mb-4 ">
           WHAT OUR CLIENT SAYS
         </h2>
 
