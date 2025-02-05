@@ -15,7 +15,13 @@ const MobileFooter = () => {
         <div className="mb-8 w-1/2">
           <div className="flex items-center mb-6">
             <div className="text-secondary text-2xl font-bold flex items-center gap-1 w-[10rem]">
-              <img src={horizontalBlueLogo} alt="Company Logo" loading="lazy" />
+              <a href="/" className=" ">
+                <img
+                  src={horizontalBlueLogo}
+                  alt="Company Logo"
+                  loading="lazy"
+                />
+              </a>
             </div>
           </div>
 
