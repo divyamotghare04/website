@@ -35,7 +35,7 @@ function ImageContainer({ img, name, role }) {
         </div>
         <div className="absolute top-0 left-0 xl:w-[20rem] xl:h-[20rem] lg:h-[12rem] lg:w-[12rem] lg:-translate-x-8 lg:-translate-y-28 xxl:-translate-x-8 xxl:-translate-y-30">
           <img
-            className="content-stretch border lg:w-[12rem]"
+            className="content-stretch shadow-xl lg:w-[12rem]"
             src={img}
             // src={hovered ? img[activeImage] : img[0]} // Show the active image
             width={300}
